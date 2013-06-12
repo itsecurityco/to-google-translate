@@ -1,4 +1,6 @@
-To-Google-Translate
+To Google Translate
 ===================
 
-Add-on para Mozilla Firefox que traduce del idioma ingles al español usando Google Translator.
+This extensión create a context menu in your firefox with a item named "To Google Translate". 
+When you click it, It send the previously selected text to Google Tranaslate. 
+The default directión for translation is: from English to Spanish.
