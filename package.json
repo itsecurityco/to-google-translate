@@ -1,0 +1,9 @@
+{
+  "name": "to-google-translate",
+  "fullName": "To Google Translate",
+  "id": "jid1-93WyvpgvxzGATw",
+  "description": "This extensión create a context menu in your firefox with a item named 'To Google Translate'. When you click it, It send the previously selected text to Google Tranaslate. The default directión for translation is: from English to Spanish.",
+  "author": "Juan M. Escobar T.",
+  "license": "MPL 2.0",
+  "version": "0.2"
+}
