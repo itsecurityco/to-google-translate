@@ -25,5 +25,11 @@
   "permissions": [
     "contextMenus",
     "storage"
-  ]
+  ],
+
+  "gecko": {
+    "id": "jid1-93WyvpgvxzGATw@jetpack",
+    "strict_min_version": "42.0a1",
+    "strict_max_version": "*"
+  }
 }
