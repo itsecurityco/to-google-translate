@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "To google translate",
+    "description": "Name of the extension"
+  },
+
+  "extensionDescription": {
+    "message": "Seleccione texto en una p&aacute;gina web y envielo a Google Translate",
+    "description": "Description of the extension."
+  },
+
+  "contextMenuTitle": {
+    "message": "Traducir texto",
+    "description": "The contextMenus title."
+  }
+}
