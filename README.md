@@ -22,8 +22,10 @@ web-ext run
 ### How to use
 #### Changing the default language
 First you should change the default language settings by accessing to about:addons > to-google-translate option page.
+
 ![](https://raw.githubusercontent.com/itseco/to-google-translate/v2.0/screenshot1.jpg)
 
 #### Translating text
 Select any text in some web page and then right click with your mouse
+
 ![](https://raw.githubusercontent.com/itseco/to-google-translate/v2.0/screenshot2.jpg)
