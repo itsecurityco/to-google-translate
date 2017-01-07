@@ -23,7 +23,9 @@ storage.get({
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     if (info.menuItemId == 'translate') {
-        storage.get('url', function (item) {
+        storage.get({
+            'url': 'https://translate.google.com/#en/es/'
+        }, function (item) {
             chrome.tabs.create({
                 url: item.url + encodeURIComponent(info.selectionText)
             });
