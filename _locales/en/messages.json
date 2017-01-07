@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "To google translate",
+    "message": "To Google Translate",
     "description": "Name of the extension"
   },
 
@@ -10,7 +10,7 @@
   },
 
   "contextMenuTitle": {
-    "message": "Translate text",
+    "message": "To Google Translate",
     "description": "The contextMenus title."
   }
 }

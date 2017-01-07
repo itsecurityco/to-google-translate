@@ -1,35 +1,38 @@
 {
-  "manifest_version": 2,
-  "name": "__MSG_extensionName__",
-  "description": "__MSG_extensionDescription__",
-  "version": "2.0",
-  "author": "Juan Escobar",
-  "homepage_url": "https://github.com/itseco/to-google-translate/",
-  "default_locale": "en",
+    "manifest_version": 2,
+    "name": "__MSG_extensionName__",
+    "description": "__MSG_extensionDescription__",
+    "version": "2.0",
+    "author": "Juan Escobar",
+    "homepage_url": "https://github.com/itseco/to-google-translate",
+    "default_locale": "en",
 
-  "icons": {
-    "16": "icons/logo-16.png",
-    "32": "icons/logo-32.png",
-    "48": "icons/logo-48.png",
-    "96": "icons/logo-96.png"
-  },
+    "icons": {
+        "16": "icons/logo-16.png",
+        "32": "icons/logo-32.png",
+        "48": "icons/logo-48.png",
+        "96": "icons/logo-96.png"
+    },
 
-  "options_ui": {
-    "page": "options.html"
-  },
+    "options_ui": {
+        "page": "options.html"
+    },
 
-  "background": {
-    "scripts": ["background.js"]
-  },
+    "background": {
+        "scripts": ["translate.js"]
+    },
 
-  "permissions": [
-    "contextMenus",
-    "storage"
-  ],
+    "permissions": [
+        "contextMenus",
+        "storage"
+    ],
 
-  "gecko": {
-    "id": "jid1-93WyvpgvxzGATw@jetpack",
-    "strict_min_version": "42.0a1",
-    "strict_max_version": "*"
-  }
+    "applications": {
+        "gecko": {
+            "id": "jid1-93WyvpgvxzGATw@jetpack",
+            "strict_min_version": "42.0a1",
+            "strict_max_version": "*",
+            "update_url": "https://raw.githubusercontent.com/itseco/to-google-translate/master/updates.json"
+        }
+    }
 }
