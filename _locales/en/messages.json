@@ -9,8 +9,13 @@
     "description": "Description of the extension."
   },
 
-  "contextMenuTitle": {
+  "contextMenuTitleTranslateText": {
     "message": "To Google Translate",
+    "description": "The contextMenus title."
+  },
+
+  "contextMenuTitleTextToSpeech": {
+    "message": "To Google Translate Speech",
     "description": "The contextMenus title."
   }
 }
