@@ -2,20 +2,36 @@
   "extensionName": {
     "message": "To Google Translate",
     "description": "Name of the extension"
-  },
+    },
 
-  "extensionDescription": {
-    "message": "Seleccione texto en una página web y envielo a Google Translate",
-    "description": "Description of the extension."
-  },
+    "extensionDescription": {
+        "message": "Seleccione texto en una página web y envielo a Google Translate",
+        "description": "Description of the extension."
+    },
 
-  "contextMenuTitleTranslate": {
-    "message": "To Google Translate",
-    "description": "The contextMenus title."
-  },
-  
-  "contextMenuTitleTextToSpeech": {
-    "message": "To Google Translate Speech",
-    "description": "The contextMenus title."
-  }
+    "contextMenuTitleTranslate": {
+        "message": "To Google Translate [$PAGE_LANG$/$USER_LANG$]",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$1",
+                "example": "es"
+            }
+        }
+    },
+
+    "contextMenuTitleTextToSpeech": {
+        "message": "To Google Translate Speech [$TTL_LANG]",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "ttl_lang": {
+                "content": "$1",
+                "example": "en"
+            }
+        }
+    }
 }
