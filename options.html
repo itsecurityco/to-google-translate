@@ -6,14 +6,37 @@
   <link rel="stylesheet" type="text/css" href="options.css">
 </head>
 <body>
-  <p class="title">Default languages</p>
+  <p class="title">Settings</p>
   <form>
-    <p>
-      From <input type="text" id="pageLang" maxlength="2" size="2" required/> 
-      To <input type="text" id="userLang"  maxlength="2" size="2" required/> 
-    </p>
-    <p>Speech language <input type="text" id="ttsLang"  maxlength="2" size="2" required/></p>
-    <button type="submit" class="button">Save</button>
+    <table>
+      <tr>
+        <td class="col1">
+          Translate Text
+        </td>
+        <td class="col2">
+          From <input type="text" id="pageLang" maxlength="2" size="2" required/> 
+        </td>
+        <td class="col3">
+          To <input type="text" id="userLang"  maxlength="2" size="2" required/> 
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          Text To Speech
+        </td>
+        <td class="col2">
+          <input type="text" id="ttsLang"  maxlength="2" size="2" required/>
+        </td>
+        <td class="col3"></td>
+      </tr>
+      <tr>
+        <td class="col1 no-border">
+          <button type="submit" class="button">Save</button>
+        </td>
+        <td class="col2 no-border"></td>
+        <td class="col3 no-border"></td>
+      </tr>
+    </table>
   </form>
   <div id="message"></div>
   <script src="options.js"></script>

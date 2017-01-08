@@ -4,23 +4,28 @@ body {
     color: #333;
 }
 
-p {
-    font-family: -moz-use-system-font;
-    font-style: -moz-use-system-font;
-    font-weight: -moz-use-system-font;
-    line-height: -moz-use-system-font;
-    font-size-adjust: -moz-use-system-font;
-    font-stretch: -moz-use-system-font;
-    font-feature-settings: -moz-use-system-font;
-    font-language-override: -moz-use-system-font;
-    font-kerning: -moz-use-system-font;
-    font-synthesis: -moz-use-system-font;
-    font-variant-alternates: -moz-use-system-font;
-    font-variant-caps: -moz-use-system-font;
-    font-variant-east-asian: -moz-use-system-font;
-    font-variant-ligatures: -moz-use-system-font;
-    font-variant-numeric: -moz-use-system-font;
-    font-variant-position: -moz-use-system-font;
+table {
+    width: 100%;
+}
+
+td {
+    border-bottom: 1px solid #666;
+    padding: 10px;
+}
+
+.no-border {
+    border-style: none;
+}
+
+.col1 {
+    width: 30%;
+    max-width: 300px;
+}
+
+.col2 {
+    text-align: right;
+    width: 20%;
+    max-width: 200px;   
 }
 
 .title {
