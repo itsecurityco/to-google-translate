@@ -5,12 +5,12 @@
     },
 
     "extensionDescription": {
-        "message": "Highlight text on a web page and send it to Google Translate",
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation.",
         "description": "Description of the extension."
     },
 
     "contextMenuTitleTranslate": {
-        "message": "To Google Translate [$PAGE_LANG$/$USER_LANG$]",
+        "message": "Translate [$PAGE_LANG$/$USER_LANG$]",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -18,14 +18,14 @@
                 "example": "en"
             },
             "user_lang": {
-                "content": "$1",
+                "content": "$2",
                 "example": "es"
             }
         }
     },
 
     "contextMenuTitleTextToSpeech": {
-        "message": "To Google Translate Speech [$TTS_LANG$]",
+        "message": "Listen [$TTS_LANG$]",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
