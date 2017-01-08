@@ -10,7 +10,7 @@
     },
 
     "contextMenuTitleTranslate": {
-        "message": "Traducir [$PAGE_LANG$/$USER_LANG$]",
+        "message": "Traducir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -25,7 +25,7 @@
     },
 
     "contextMenuTitleTextToSpeech": {
-        "message": "Listen [$TTS_LANG$]",
+        "message": "Listen ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
