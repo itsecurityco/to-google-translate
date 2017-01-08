@@ -10,29 +10,52 @@ document.addEventListener('DOMContentLoaded', loadOptions);
 document.querySelector('form').addEventListener('submit', saveOptions);
 
 var storage = chrome.storage.local;
-var from = document.querySelector('#from');
-var to = document.querySelector('#to');
+var pageLang = document.querySelector('#pageLang');
+var userLang = document.querySelector('#userLang');
 
 function saveOptions(e) {
     e.preventDefault();
     storage.set({
-        'from': from.value,
-        'to': to.value,
-        'url': `https://translate.google.com/#${from.value}/${to.value}/`
+        'pageLang': pageLang.value,
+        'userLang': userLang.value,
+        'ttsLang': ttsLang.value,
+        'translateURL': `https://translate.google.com/#${pageLang.value}/${userLang.value}/`,
+        'ttsURL': `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${tts.value}&q=`
     }, function () {
-        chrome.contextMenus.update('translate', {
-            title: chrome.i18n.getMessage('contextMenuTitle') + ` [${from.value}/${to.value}]`
-        }, function () {
+        isTranslateMenuUpdated = updateContextMenuTitle('translate', 
+            chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]));
+        
+        isTTSMenuUpdated = updateContextMenuTitle('tts', 
+            chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang));
+
+        if (isTranslateMenuUpdated && isTTSMenuUpdated) {
             showMessage('Settings saved');
-        });
+        } else {
+            showMessage('Error saving settings');
+        }
     });
 }
 
 function loadOptions() {
-    storage.get({'from': 'en', 'to': 'es'}, function (items) {
-        from.value = items.from;
-        to.value = items.to;
+    storage.get({
+        'pageLang': 'en', 
+        'userLang': 'es', 
+        'ttsLang': 'en'
+    }, function (items) {
+        pageLang.value = items.pageLang;
+        userLang.value = items.userLang;
+        ttsLang.value = items.ttsLang;
     });
+}
+
+function updateContextMenuTitle(id, title) {
+    chrome.contextMenus.update(id, {
+        title: title
+    }, function () {
+        return true;
+    });
+
+    return false;
 }
 
 function showMessage(msg) {

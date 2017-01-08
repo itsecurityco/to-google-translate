@@ -25,10 +25,10 @@
     },
 
     "contextMenuTitleTextToSpeech": {
-        "message": "To Google Translate Speech [$TTL_LANG]",
+        "message": "To Google Translate Speech [$TTS_LANG$]",
         "description": "The contextMenus title.",
         "placeholders": {
-            "ttl_lang": {
+            "tts_lang": {
                 "content": "$1",
                 "example": "en"
             }
