@@ -12,6 +12,7 @@ document.querySelector('form').addEventListener('submit', saveOptions);
 var storage = chrome.storage.local;
 var pageLang = document.querySelector('#pageLang');
 var userLang = document.querySelector('#userLang');
+var ttsLang = document.querySelector('#ttsLang');
 
 function saveOptions(e) {
     e.preventDefault();
@@ -20,26 +21,20 @@ function saveOptions(e) {
         'userLang': userLang.value,
         'ttsLang': ttsLang.value,
         'translateURL': `https://translate.google.com/#${pageLang.value}/${userLang.value}/`,
-        'ttsURL': `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${tts.value}&q=`
+        'ttsURL': `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`
     }, function () {
-        isTranslateMenuUpdated = updateContextMenuTitle('translate', 
-            chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]));
-        
-        isTTSMenuUpdated = updateContextMenuTitle('tts', 
-            chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang));
-
-        if (isTranslateMenuUpdated && isTTSMenuUpdated) {
-            showMessage('Settings saved');
-        } else {
-            showMessage('Error saving settings');
-        }
+        updateContextMenuTitle('translate', 
+            chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]));
+        updateContextMenuTitle('tts', 
+            chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value));
+        showMessage('Settings saved');
     });
 }
 
 function loadOptions() {
     storage.get({
-        'pageLang': 'en', 
-        'userLang': 'es', 
+        'pageLang': 'en',
+        'userLang': 'es',
         'ttsLang': 'en'
     }, function (items) {
         pageLang.value = items.pageLang;
@@ -48,14 +43,10 @@ function loadOptions() {
     });
 }
 
-function updateContextMenuTitle(id, title) {
+function updateContextMenuTitle(id, value) {
     chrome.contextMenus.update(id, {
-        title: title
-    }, function () {
-        return true;
+        title: value
     });
-
-    return false;
 }
 
 function showMessage(msg) {
