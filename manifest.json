@@ -27,6 +27,8 @@
         "storage"
     ],
 
+    "web_accessible_resources": ["icons/help.png"],
+
     "applications": {
         "gecko": {
             "id": "jid1-93WyvpgvxzGATw@jetpack"

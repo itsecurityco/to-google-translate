@@ -4,6 +4,18 @@ body {
     color: #333;
 }
 
+.help {
+    font-size: 1rem;
+    color: #666;
+}
+
+.icon {
+    background-image: url('icons/help.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
 table {
     width: 100%;
 }
@@ -43,7 +55,7 @@ input {
     border-style: solid;
     background-color: white;
     padding: 0.5em 0em;
-    width: 2em;
+    width: 3em;
     text-align: center;
 }
 
