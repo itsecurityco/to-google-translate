@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "2.1",
+    "version": "2.2",
     "author": "Juan Escobar",
     "homepage_url": "https://github.com/itseco/to-google-translate",
     "default_locale": "en",
