@@ -31,25 +31,33 @@
 var storage = chrome.storage.local;
 
 storage.get({
-    'pageLang': 'en',
+    'pageLang': 'auto',
     'userLang': 'es',
-    'ttsLang': 'en'
+    'ttsLang': 'en',
+    'enableTT': true,
+    'enableTTS': true
 }, function (items) {
     var pageLang = items.pageLang,
         userLang = items.userLang,
         ttsLang = items.ttsLang;
+        enableTT = items.enableTT;
+        enableTTS = items.enableTTS;
+    
+    if (enableTT == true) {
+        chrome.contextMenus.create({
+            id: 'translate',
+            title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]),
+            contexts: ['selection']
+        });
+    }
 
+    if (enableTTS == true) {
     chrome.contextMenus.create({
-        id: 'translate',
-        title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]),
-        contexts: ['selection']
-    });
-
-    chrome.contextMenus.create({
-        id: 'tts',
-        title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang),
-        contexts: ['selection']
-    });
+            id: 'tts',
+            title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang),
+            contexts: ['selection']
+        });
+    }
 });
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
@@ -57,7 +65,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     if (info.menuItemId == 'translate') {
         storage.get({
-            'translateURL': 'https://translate.google.com/#en/es/'
+            'translateURL': 'https://translate.google.com/#auto/es/'
         }, function (item) {
             chrome.tabs.create({
                 url: item.translateURL + encodeURIComponent(selectedText)

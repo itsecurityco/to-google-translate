@@ -1,11 +1,8 @@
 body {
-    margin: 30px;
-    font-size: 1.25rem;
     color: #333;
 }
 
 .help {
-    font-size: 1rem;
     color: #666;
 }
 
@@ -13,20 +10,24 @@ body {
     background-image: url('icons/help.png');
     background-position: left center;
     background-repeat: no-repeat;
-    padding-left: 20px;
+    padding-left: 22px;
 }
 
 table {
     width: 100%;
+    border: 1px solid #d7d7db !important;
 }
 
 td {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #d7d7db !important;  
+}
+
+td {
     padding: 10px;
 }
 
 .no-border {
-    border-style: none;
+    border-style: none !important;
 }
 
 .col1 {

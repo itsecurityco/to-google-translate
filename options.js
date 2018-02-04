@@ -13,6 +13,8 @@ var storage = chrome.storage.local;
 var pageLang = document.querySelector('#pageLang');
 var userLang = document.querySelector('#userLang');
 var ttsLang = document.querySelector('#ttsLang');
+var enableTT = document.querySelector('#enableTT');
+var enableTTS = document.querySelector('#enableTTS');
 
 function saveOptions(e) {
     e.preventDefault();
@@ -20,6 +22,8 @@ function saveOptions(e) {
         'pageLang': pageLang.value,
         'userLang': userLang.value,
         'ttsLang': ttsLang.value,
+        'enableTT': enableTT.checked,
+        'enableTTS': enableTTS.checked,
         'translateURL': `https://translate.google.com/#${pageLang.value}/${userLang.value}/`,
         'ttsURL': `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`
     }, function () {
@@ -28,18 +32,43 @@ function saveOptions(e) {
         updateContextMenuTitle('tts', 
             chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value));
         showMessage('Settings saved');
+        
+        if (enableTT.checked == false) {
+            removeContextMenu('translate');
+        } else {
+            chrome.contextMenus.create({
+                id: 'translate',
+                title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]),
+                contexts: ['selection']
+            });
+        }
+
+        if (enableTTS.checked == false) {
+            removeContextMenu('tts');
+        } else {
+            chrome.contextMenus.create({
+                id: 'tts',
+                title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value),
+                contexts: ['selection']
+            });
+        }
+        
     });
 }
 
 function loadOptions() {
     storage.get({
-        'pageLang': 'en',
+        'pageLang': 'auto',
         'userLang': 'es',
-        'ttsLang': 'en'
+        'ttsLang': 'en',
+        'enableTT': true,
+        'enableTTS': true
     }, function (items) {
         pageLang.value = items.pageLang;
         userLang.value = items.userLang;
         ttsLang.value = items.ttsLang;
+        enableTT.checked = items.enableTT;
+        enableTTS.checked = items.enableTTS;
     });
 }
 
@@ -47,6 +76,10 @@ function updateContextMenuTitle(id, value) {
     chrome.contextMenus.update(id, {
         title: value
     });
+}
+
+function removeContextMenu(id) {
+    chrome.contextMenus.remove(id);
 }
 
 function showMessage(msg) {
