@@ -60,27 +60,35 @@ storage.get({
     }
 });
 
+function tranlateText(selectedText) {
+    storage.get({
+        'translateURL': 'https://translate.google.com/#auto/es/'
+    }, function (item) {
+        chrome.tabs.create({
+            url: item.translateURL + encodeURIComponent(selectedText)
+        });
+    });
+};
+
+function listenText(selectedText) {
+    storage.get({
+        'ttsURL': 'https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q='
+    }, function (item) {
+        chrome.tabs.create({
+            url: item.ttsURL + encodeURIComponent(selectedText) +
+                '&textlen=' + selectedText.length
+        });
+    });
+};
+
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var selectedText = info.selectionText;
-
+    
     if (info.menuItemId == 'translate') {
-        storage.get({
-            'translateURL': 'https://translate.google.com/#auto/es/'
-        }, function (item) {
-            chrome.tabs.create({
-                url: item.translateURL + encodeURIComponent(selectedText)
-            });
-        });
+        tranlateText(selectedText);
     }
 
     if (info.menuItemId == 'tts') {
-        storage.get({
-            'ttsURL': 'https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q='
-        }, function (item) {
-            chrome.tabs.create({
-                url: item.ttsURL + encodeURIComponent(selectedText) +
-                    '&textlen=' + selectedText.length
-            });
-        });
+        listenText(selectedText);
     }
 });
