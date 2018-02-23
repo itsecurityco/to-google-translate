@@ -1,0 +1,37 @@
+{
+    "extensionName": {
+        "message": "Para o Google Tradutor",
+        "description": "Nome da extensão"
+    },
+
+    "extensionDescription": {
+        "message": "Selecione o texto em uma página da Web e envie-a para o Google Tradutor ou ouça a sua pronúncia.",
+        "description": "Descrição da extensão."
+    },
+
+    "contextMenuTitleTranslate": {
+        "message": "Traduzir ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "pt"
+            }
+        }
+    },
+
+    "contextMenuTitleTextToSpeech": {
+        "message": "Ouvir pronúncia ($TTS_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "tts_lang": {
+                "content": "$1",
+                "example": "en"
+            }
+        }
+    }
+}
