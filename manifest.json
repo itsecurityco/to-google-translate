@@ -2,9 +2,9 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "3.0",
+    "version": "3.1",
     "author": "Juan Escobar",
-    "homepage_url": "https://github.com/itseco/to-google-translate",
+    "homepage_url": "https://github.com/itsecurityco/to-google-translate",
     "default_locale": "en",
 
     "icons": {
