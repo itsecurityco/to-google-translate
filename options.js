@@ -24,8 +24,8 @@ function saveOptions(e) {
         'ttsLang': ttsLang.value,
         'enableTT': enableTT.checked,
         'enableTTS': enableTTS.checked,
-        'translateURL': `https://translate.google.com/#${pageLang.value}/${userLang.value}/`,
-        'ttsURL': `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`
+        'translateURL': `https://${gtDomain}/#${pageLang.value}/${userLang.value}/`,
+        'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`
     }, function () {
         updateContextMenuTitle('translate', 
             chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]));
@@ -62,13 +62,15 @@ function loadOptions() {
         'userLang': 'es',
         'ttsLang': 'en',
         'enableTT': true,
-        'enableTTS': true
+        'enableTTS': true,
+        'gtDomain': getGoogleTranslatorDomain()
     }, function (items) {
         pageLang.value = items.pageLang;
         userLang.value = items.userLang;
         ttsLang.value = items.ttsLang;
         enableTT.checked = items.enableTT;
         enableTTS.checked = items.enableTTS;
+        gtDomain = items.gtDomain;
     });
 }
 
@@ -89,4 +91,15 @@ function showMessage(msg) {
     setTimeout(function () {
         message.style.display = 'none';
     }, 3000);
+}
+
+function getGoogleTranslatorDomain() {
+    var offset = new Date().getTimezoneOffset();
+    // Domain for China
+    if (offset/60 == -8) {
+        return "translate.google.cn"; 
+    // Domain for rest of world
+    } else { 
+        return "translate.google.com"; 
+    }
 }

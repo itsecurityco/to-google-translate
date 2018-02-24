@@ -62,7 +62,7 @@ storage.get({
 
 function tranlateText(selectedText) {
     storage.get({
-        'translateURL': 'https://translate.google.com/#auto/es/'
+        'translateURL': `https://${getGoogleTranslatorDomain()}/#auto/es/`
     }, function (item) {
         chrome.tabs.create({
             url: item.translateURL + encodeURIComponent(selectedText)
@@ -72,7 +72,7 @@ function tranlateText(selectedText) {
 
 function listenText(selectedText) {
     storage.get({
-        'ttsURL': 'https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q='
+        'ttsURL': `https://${getGoogleTranslatorDomain()}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
     }, function (item) {
         chrome.tabs.create({
             url: item.ttsURL + encodeURIComponent(selectedText) +
@@ -92,3 +92,14 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         listenText(selectedText);
     }
 });
+
+function getGoogleTranslatorDomain() {
+    var offset = new Date().getTimezoneOffset();
+    // Domain for China
+    if (offset/60 == -8) {
+        return "translate.google.cn"; 
+    // Domain for rest of world
+    } else { 
+        return "translate.google.com"; 
+    }
+}
