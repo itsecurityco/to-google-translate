@@ -1,11 +1,11 @@
-.PHONY: setup build
+.PHONY: prepare build
 
 all: build
 
-build: setup
+build: prepare
 	web-ext build --overwrite-dest
 
-setup: extlib/webextensions-lib-l10n/l10n.js
+prepare: extlib/webextensions-lib-l10n/l10n.js
 	git submodule update
 	cp extlib/webextensions-lib-l10n/l10n.js ./
 
