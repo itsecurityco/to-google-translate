@@ -23,6 +23,7 @@ Download the code from Github
 ```sh
 git clone https://github.com/itseco/to-google-translate.git
 cd to-google-translate
+make prepare
 ```
 
 Run in the root folder extension the command

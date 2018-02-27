@@ -1,0 +1,3 @@
+[submodule "extlib/webextensions-lib-l10n"]
+	path = extlib/webextensions-lib-l10n
+	url = https://github.com/piroor/webextensions-lib-l10n.git
