@@ -1,0 +1,37 @@
+{
+    "extensionName": {
+        "message": "To Google Translate",
+        "description": "拡張機能の名前"
+    },
+
+    "extensionDescription": {
+        "message": "Webページ内のテキストを選択して、Google翻訳に送ったり、発音を聞いたりできるようにします。",
+        "description": "拡張機能の説明文"
+    },
+
+    "contextMenuTitleTranslate": {
+        "message": "翻訳 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "コンテキストメニュー項目の名前",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+
+    "contextMenuTitleTextToSpeech": {
+        "message": "発音を聞く ($TTS_LANG$)",
+        "description": "コンテキストメニュー項目の名前",
+        "placeholders": {
+            "tts_lang": {
+                "content": "$1",
+                "example": "en"
+            }
+        }
+    }
+}
