@@ -33,5 +33,56 @@
                 "example": "en"
             }
         }
+    },
+
+
+    "optionsPageTitle": {
+        "message": "To Google Translate - 設定ページ",
+        "description": "設定ページ自体のタイトル"
+    },
+
+    "optionsTitle": {
+        "message": "設定",
+        "description": "設定ページに表示されるタイトル"
+    },
+
+    "optionsNoteForEncounteringMultipleLanguage": {
+        "message": "複数の言語から翻訳したい場合は「翻訳元」欄を「auto」に設定してください。",
+        "description": "言語設定の注意書き"
+    },
+    "optionsTTCaption": {
+        "message": "テキスト翻訳",
+        "description": "テキスト翻訳の見出し"
+    },
+    "optionsPageLang": {
+        "message": "翻訳元",
+        "description": "ページの言語の前のラベル"
+    },
+    "optionsUserLang": {
+        "message": "翻訳先",
+        "description": "翻訳後の言語の前のラベル"
+    },
+    "optionsEnableTT": {
+        "message": "有効にする",
+        "description": "「翻訳」メニュー項目を表示するためのチェックボックスのラベル"
+    },
+
+    "optionsTTSCaption": {
+        "message": "テキスト読み上げ",
+        "description": "テキスト読み上げの見出し"
+    },
+    "optionsEnableTTS": {
+        "message": "有効にする",
+        "description": "「発音を聞く」メニュー項目を表示するためのチェックボックスのラベル"
+    },
+
+    "optionsSubmit": {
+        "message": "保存",
+        "description": "設定を保存するボタンのラベル"
+    },
+
+    "optionsMessageSaved": {
+        "message": "設定が保存されました",
+        "description": "設定が成功裏に保存された時に表示するメッセージ"
     }
 }
