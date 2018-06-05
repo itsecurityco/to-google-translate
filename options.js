@@ -32,7 +32,7 @@ function saveOptions(e) {
         updateContextMenuTitle('tts', 
             chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value));
         showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
-        
+
         if (enableTT.checked == false) {
             removeContextMenu('translate');
         } else {

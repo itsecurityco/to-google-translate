@@ -43,6 +43,7 @@ storage.get({
         enableTT = items.enableTT;
         enableTTS = items.enableTTS;
     
+    // create Translate context menu
     if (enableTT == true) {
         chrome.contextMenus.create({
             id: 'translate',
@@ -50,7 +51,7 @@ storage.get({
             contexts: ['selection']
         });
     }
-
+    // create Listen context menu
     if (enableTTS == true) {
     chrome.contextMenus.create({
             id: 'tts',
@@ -60,36 +61,24 @@ storage.get({
     }
 });
 
-function tranlateText(selectedText) {
-    storage.get({
-        'translateURL': `https://${getGoogleTranslatorDomain()}/#auto/es/`
-    }, function (item) {
-        chrome.tabs.create({
-            url: item.translateURL + encodeURIComponent(selectedText)
-        });
-    });
-};
-
-function listenText(selectedText) {
-    storage.get({
-        'ttsURL': `https://${getGoogleTranslatorDomain()}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
-    }, function (item) {
-        chrome.tabs.create({
-            url: item.ttsURL + encodeURIComponent(selectedText) +
-                '&textlen=' + selectedText.length
-        });
-    });
-};
-
+// manage clic context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var selectedText = info.selectionText;
     
     if (info.menuItemId == 'translate') {
-        tranlateText(selectedText);
+        storage.get({
+            'translateURL': `https://${getGoogleTranslatorDomain()}/#auto/es/`
+        }, function (item) {
+            tabCreateWithOpenerTabId(item.translateURL+encodeURIComponent(selectedText), tab);
+        });
     }
 
     if (info.menuItemId == 'tts') {
-        listenText(selectedText);
+        storage.get({
+            'ttsURL': `https://${getGoogleTranslatorDomain()}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
+        }, function (item) {
+            tabCreateWithOpenerTabId(item.ttsURL+encodeURIComponent(selectedText)+'&textlen='+selectedText.length, tab);
+        });
     }
 });
 
@@ -102,4 +91,26 @@ function getGoogleTranslatorDomain() {
     } else { 
         return "translate.google.com"; 
     }
+}
+
+// Create a tab with openerTabId if version of Firefox is above 57
+// https://github.com/itsecurityco/to-google-translate/pull/19
+function tabCreateWithOpenerTabId(uri, tab) {
+    function gotBrowserInfo(info) {
+        FirefoxVersion = Math.round(parseInt(info.version));
+        if (FirefoxVersion < 57) {
+            // openerTabId not supported
+            chrome.tabs.create({
+                url: uri
+            });
+        } else {
+            // openerTabId supported
+            chrome.tabs.create({
+                url: uri,
+                openerTabId: tab.id
+            });
+        }
+    }
+    var gettingInfo = browser.runtime.getBrowserInfo();
+    gettingInfo.then(gotBrowserInfo);
 }
