@@ -60,25 +60,23 @@ storage.get({
     }
 });
 
-function tranlateText(selectedText, openerTab) {
+function tranlateText(selectedText) {
     storage.get({
         'translateURL': `https://${getGoogleTranslatorDomain()}/#auto/es/`
     }, function (item) {
         chrome.tabs.create({
-            url: item.translateURL + encodeURIComponent(selectedText),
-            openerTabId: openerTab.id
+            url: item.translateURL + encodeURIComponent(selectedText)
         });
     });
 };
 
-function listenText(selectedText, openerTab) {
+function listenText(selectedText) {
     storage.get({
         'ttsURL': `https://${getGoogleTranslatorDomain()}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
     }, function (item) {
         chrome.tabs.create({
             url: item.ttsURL + encodeURIComponent(selectedText) +
-                '&textlen=' + selectedText.length,
-            openerTabId: openerTab.id
+                '&textlen=' + selectedText.length
         });
     });
 };
@@ -87,11 +85,11 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var selectedText = info.selectionText;
     
     if (info.menuItemId == 'translate') {
-        tranlateText(selectedText, tab);
+        tranlateText(selectedText);
     }
 
     if (info.menuItemId == 'tts') {
-        listenText(selectedText, tab);
+        listenText(selectedText);
     }
 });
 
