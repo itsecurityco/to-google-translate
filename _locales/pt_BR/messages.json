@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "To Google Translate",
+        "message": "Para o Google Tradutor",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "ウェブページ内のテキストを選択して Google 翻訳へ送ったり、発音を聞いたりできます。",
+        "message": "Selecione texto em uma página e envie para o Google Tradutor ou ouça sua pronúncia.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "翻訳 ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Traduzir ($PAGE_LANG$\/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "発音を聞く ($TTS_LANG$)",
+        "message": "Ouvir pronúncia ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,47 +32,47 @@
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate - 設定ページ",
+        "message": "Para o Google Tradutor - Pagina de Opções",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "設定",
+        "message": "Configurações",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "複数の言語から翻訳したい場合は「翻訳元」欄を「auto」に設定してください。",
+        "message": "Defina o campo 'De' como 'auto' para usar quando encontrar vários idiomas.",
         "description": "Notice message for language settings"
     },
     "optionsTTCaption": {
-        "message": "テキスト翻訳",
+        "message": "Traduzir texto",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "翻訳元",
+        "message": "De",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "翻訳先",
+        "message": "Para",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "有効にする",
+        "message": "Ativar",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "テキスト読み上げ",
+        "message": "Texto para fala",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "有効にする",
+        "message": "Ativar",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsSubmit": {
-        "message": "保存",
+        "message": "Salvar",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "設定が保存されました",
+        "message": "Configurações salvas",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
