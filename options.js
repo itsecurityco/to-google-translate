@@ -24,7 +24,7 @@ function saveOptions(e) {
         'ttsLang': ttsLang.value,
         'enableTT': enableTT.checked,
         'enableTTS': enableTTS.checked,
-        'translateURL': `https://${gtDomain}/#${pageLang.value}/${userLang.value}/`,
+        'translateURL': `https://${gtDomain}/?sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`
     }, function () {
         updateContextMenuTitle('translate', 
