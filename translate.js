@@ -67,7 +67,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
     
     if (info.menuItemId == 'translate') {
         storage.get({
-            'translateURL': `https://${getGoogleTranslatorDomain()}/#auto/es/`
+            'translateURL': `https://${getGoogleTranslatorDomain()}/?sl=auto&tl=es&text=`
         }, function (item) {
             tabCreateWithOpenerTabId(item.translateURL+encodeURIComponent(selectedText), tab);
         });
