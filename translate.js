@@ -34,15 +34,21 @@ storage.get({
     'pageLang': 'auto',
     'userLang': 'es',
     'ttsLang': 'en',
+    'TPpageLang': 'auto',
+    'TPuserLang': 'es',
     'enableTT': true,
-    'enableTTS': true
+    'enableTTS': true,
+    'enableTP': true
 }, function (items) {
     var pageLang = items.pageLang,
         userLang = items.userLang,
-        ttsLang = items.ttsLang;
-        enableTT = items.enableTT;
-        enableTTS = items.enableTTS;
-    
+        ttsLang = items.ttsLang,
+        TPpageLang = items.TPpageLang,
+        TPuserLang = items.TPuserLang,
+        enableTT = items.enableTT,
+        enableTTS = items.enableTTS,
+        enableTP = items.enableTP;
+
     // create Translate context menu
     if (enableTT == true) {
         chrome.contextMenus.create({
@@ -59,11 +65,20 @@ storage.get({
             contexts: ['selection']
         });
     }
+    // create Translate Page context menu
+    if (enableTP == true) {
+        chrome.contextMenus.create({
+            id: 'translatePage',
+            title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang, TPuserLang]),
+            contexts: ['all']
+        });
+    }
 });
 
-// manage clic context menu
+// manage click context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var selectedText = info.selectionText;
+    var currentURL = info.pageUrl;
     
     if (info.menuItemId == 'translate') {
         storage.get({
@@ -78,6 +93,14 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
             'ttsURL': `https://${getGoogleTranslatorDomain()}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
         }, function (item) {
             tabCreateWithOpenerTabId(item.ttsURL+encodeURIComponent(selectedText)+'&textlen='+selectedText.length, tab);
+        });
+    }
+
+    if (info.menuItemId == 'translatePage') {
+        storage.get({
+            'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
+        }, function (item) {
+            tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(currentURL), tab);
         });
     }
 });
