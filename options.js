@@ -66,6 +66,7 @@ function saveOptions(e) {
 
         if (enableTP.checked == false) {
             removeContextMenu('translatePage');
+            removeContextMenu('translatePageLink');
         } else {
             chrome.contextMenus.create({
                 id: 'translatePage',
@@ -84,26 +85,62 @@ function saveOptions(e) {
 }
 
 function loadOptions() {
-    storage.get({
-        'pageLang': 'auto',
-        'userLang': 'es',
-        'ttsLang': 'en',
-        'TPpageLang': 'auto',
-        'TPuserLang': 'es',
-        'enableTT': true,
-        'enableTTS': true,
-        'enableTP': true,
-        'gtDomain': getGoogleTranslatorDomain()
-    }, function (items) {
-        pageLang.value = items.pageLang;
-        userLang.value = items.userLang;
-        ttsLang.value = items.ttsLang;
-        TPpageLang.value = items.TPpageLang;
-        TPuserLang.value = items.TPuserLang;
-        enableTT.checked = items.enableTT;
-        enableTTS.checked = items.enableTTS;
-        enableTP.checked = items.enableTP;
-        gtDomain = items.gtDomain;
+    fetch(chrome.runtime.getURL('supported_languages.json'))
+        .then(response => response.json())
+        .then(languages => {
+
+            let textOptions = [];
+            function createOption(text,value) {
+                let option = document.createElement("option");
+                option.text = text;
+                option.value = value;
+                return option;
+            }
+
+            for(let lang of languages.text){
+                textOptions.push(createOption(lang.language, lang.code));
+            }
+
+            for(let lang of languages.tts){
+                ttsLang.add(createOption(lang.language, lang.code));
+            }
+
+            let autoOption = createOption("Auto", "auto")
+
+            pageLang.add(autoOption.cloneNode(true));
+            TPpageLang.add(autoOption.cloneNode(true));
+            ttsLang.add(autoOption.cloneNode(true));
+
+            for(let option of textOptions){
+                pageLang.add(option);
+                userLang.add(option);
+
+                TPpageLang.add(option.cloneNode(true));
+                TPuserLang.add(option.cloneNode(true));
+            }
+
+            storage.get({
+                'pageLang': 'auto',
+                'userLang': 'es',
+                'ttsLang': 'en-US',
+                'TPpageLang': 'auto',
+                'TPuserLang': 'es',
+                'enableTT': true,
+                'enableTTS': true,
+                'enableTP': true,
+                'gtDomain': getGoogleTranslatorDomain()
+            }, function (items) {
+                pageLang.value = items.pageLang;
+                userLang.value = items.userLang;
+                ttsLang.value = items.ttsLang;
+                TPpageLang.value = items.TPpageLang;
+                TPuserLang.value = items.TPuserLang;
+                enableTT.checked = items.enableTT;
+                enableTTS.checked = items.enableTTS;
+                enableTP.checked = items.enableTP;
+                gtDomain = items.gtDomain;
+            });
+
     });
 }
 

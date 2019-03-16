@@ -33,7 +33,7 @@ var storage = chrome.storage.local;
 storage.get({
     'pageLang': 'auto',
     'userLang': 'es',
-    'ttsLang': 'en',
+    'ttsLang': 'en-US',
     'TPpageLang': 'auto',
     'TPuserLang': 'es',
     'enableTT': true,

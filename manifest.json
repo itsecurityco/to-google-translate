@@ -27,7 +27,7 @@
         "storage"
     ],
 
-    "web_accessible_resources": ["icons/help.png"],
+    "web_accessible_resources": ["icons/help.png", "supported_languages.json"],
 
     "applications": {
         "gecko": {
