@@ -119,21 +119,14 @@ function getGoogleTranslatorDomain() {
 // Create a tab with openerTabId if version of Firefox is above 57
 // https://github.com/itsecurityco/to-google-translate/pull/19
 function tabCreateWithOpenerTabId(uri, tab) {
-    function gotBrowserInfo(info) {
-        FirefoxVersion = Math.round(parseInt(info.version));
-        if (FirefoxVersion < 57) {
-            // openerTabId not supported
-            chrome.tabs.create({
-                url: uri
-            });
-        } else {
+    browser.runtime.getBrowserInfo().then(info => {
+        let newTabConfig = {
+            url: uri
+        };
+        if (Math.round(parseInt(info.version)) > 56) {
             // openerTabId supported
-            chrome.tabs.create({
-                url: uri,
-                openerTabId: tab.id
-            });
+            newTabConfig.openerTabId = tab.id;
         }
-    }
-    var gettingInfo = browser.runtime.getBrowserInfo();
-    gettingInfo.then(gotBrowserInfo);
+        chrome.tabs.create(newTabConfig);
+    });
 }
