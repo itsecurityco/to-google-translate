@@ -35,6 +35,21 @@
         }
     },
 
+    "contextMenuTitleTranslatePage": {
+        "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+
     "optionsPageTitle": {
         "message": "To Google Translate - Options page",
         "description": "Title of the options page itself."
@@ -73,6 +88,23 @@
     "optionsEnableTTS": {
         "message": "Enable",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+
+    "optionsTPCaption": {
+        "message": "Translate Page",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "From",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "To",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Enable",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
 
     "optionsSubmit": {
