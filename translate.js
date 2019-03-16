@@ -72,14 +72,19 @@ storage.get({
             title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang, TPuserLang]),
             contexts: ['all']
         });
+
+        chrome.contextMenus.create({
+            id: 'translatePageLink',
+            title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang, TPuserLang]),
+            contexts: ['link']
+        });
     }
 });
 
 // manage click context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var selectedText = info.selectionText;
-    var currentURL = info.pageUrl;
-    
+
     if (info.menuItemId == 'translate') {
         storage.get({
             'translateURL': `https://${getGoogleTranslatorDomain()}/?sl=auto&tl=es&text=`
@@ -100,7 +105,15 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         storage.get({
             'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
         }, function (item) {
-            tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(currentURL), tab);
+            tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(info.pageUrl), tab);
+        });
+    }
+
+    if (info.menuItemId == 'translatePageLink') {
+        storage.get({
+            'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
+        }, function (item) {
+            tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(info.linkUrl), tab);
         });
     }
 });

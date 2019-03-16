@@ -50,6 +50,21 @@
         }
     },
 
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+
     "optionsPageTitle": {
         "message": "To Google Translate - Options page",
         "description": "Title of the options page itself."
