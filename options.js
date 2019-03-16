@@ -112,8 +112,8 @@ function loadOptions() {
             ttsLang.add(autoOption.cloneNode(true));
 
             for(let option of textOptions){
-                pageLang.add(option);
-                userLang.add(option);
+                pageLang.add(option.cloneNode(true));
+                userLang.add(option.cloneNode(true));
 
                 TPpageLang.add(option.cloneNode(true));
                 TPuserLang.add(option.cloneNode(true));
