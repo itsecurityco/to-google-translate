@@ -40,6 +40,8 @@ function saveOptions(e) {
             chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value));
         updateContextMenuTitle('translatePage',
             chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang.value, TPuserLang.value]));
+        updateContextMenuTitle('translatePageLink',
+            chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang.value, TPuserLang.value]));
         showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
 
         if (enableTT.checked == false) {
@@ -69,6 +71,12 @@ function saveOptions(e) {
                 id: 'translatePage',
                 title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang.value, TPuserLang.value]),
                 contexts: ['all']
+            });
+
+            chrome.contextMenus.create({
+                id: 'translatePageLink',
+                title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang.value, TPuserLang.value]),
+                contexts: ['link']
             });
         }
         
