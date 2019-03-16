@@ -118,6 +118,12 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
     }
 });
 
+chrome.runtime.onInstalled.addListener(function(info){
+    if(info.reason === "install"){
+        chrome.runtime.openOptionsPage();
+    }
+});
+
 function getGoogleTranslatorDomain() {
     var offset = new Date().getTimezoneOffset();
     // Domain for China
