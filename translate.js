@@ -51,36 +51,41 @@ storage.get({
         enableTTS = items.enableTTS,
         enableTP = items.enableTP;
 
-    // create Translate context menu
-    if (enableTT == true) {
-        chrome.contextMenus.create({
-            id: 'translate',
-            title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]),
-            contexts: ['selection']
-        });
-    }
-    // create Listen context menu
-    if (enableTTS == true) {
-    chrome.contextMenus.create({
-            id: 'tts',
-            title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang),
-            contexts: ['selection']
-        });
-    }
-    // create Translate Page context menu
-    if (enableTP == true) {
-        chrome.contextMenus.create({
-            id: 'translatePage',
-            title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang, TPuserLang]),
-            contexts: ['all']
-        });
+    gtDomain = items.gtDomain;
 
-        chrome.contextMenus.create({
-            id: 'translatePageLink',
-            title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang, TPuserLang]),
-            contexts: ['link']
-        });
-    }
+    chrome.contextMenus.removeAll(function() {
+        // create Translate context menu
+        if (enableTT) {
+            chrome.contextMenus.create({
+                id: 'translate',
+                title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]),
+                contexts: ['selection']
+            });
+        }
+        // create Listen context menu
+        if (enableTTS) {
+            chrome.contextMenus.create({
+                id: 'tts',
+                title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang),
+                contexts: ['selection']
+            });
+        }
+        // create Translate Page context menu
+        if (enableTP) {
+            chrome.contextMenus.create({
+                id: 'translatePage',
+                title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang, TPuserLang]),
+                contexts: ['all']
+            });
+
+            chrome.contextMenus.create({
+                id: 'translatePageLink',
+                title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang, TPuserLang]),
+                contexts: ['link']
+            });
+        }
+    });
+
 });
 
 // manage click context menu

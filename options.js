@@ -48,52 +48,9 @@ function saveOptions(e) {
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
         'translatePageURL': `https://${gtDomain}/translate?sl=${TPpageLang.value}&tl=${TPuserLang.value}&u=`
     }, function () {
-        updateContextMenuTitle('translate', 
-            chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]));
-        updateContextMenuTitle('tts', 
-            chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value));
-        updateContextMenuTitle('translatePage',
-            chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang.value, TPuserLang.value]));
-        updateContextMenuTitle('translatePageLink',
-            chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang.value, TPuserLang.value]));
+
         showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
-
-        if (enableTT.checked == false) {
-            removeContextMenu('translate');
-        } else {
-            chrome.contextMenus.create({
-                id: 'translate',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]),
-                contexts: ['selection']
-            });
-        }
-
-        if (enableTTS.checked == false) {
-            removeContextMenu('tts');
-        } else {
-            chrome.contextMenus.create({
-                id: 'tts',
-                title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value),
-                contexts: ['selection']
-            });
-        }
-
-        if (enableTP.checked == false) {
-            removeContextMenu('translatePage');
-            removeContextMenu('translatePageLink');
-        } else {
-            chrome.contextMenus.create({
-                id: 'translatePage',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang.value, TPuserLang.value]),
-                contexts: ['all']
-            });
-
-            chrome.contextMenus.create({
-                id: 'translatePageLink',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang.value, TPuserLang.value]),
-                contexts: ['link']
-            });
-        }
+        chrome.extension.getBackgroundPage().window.location.reload()
         
     });
 }
@@ -158,16 +115,6 @@ function loadOptions() {
             });
 
     });
-}
-
-function updateContextMenuTitle(id, value) {
-    chrome.contextMenus.update(id, {
-        title: value
-    });
-}
-
-function removeContextMenu(id) {
-    chrome.contextMenus.remove(id);
 }
 
 function showMessage(msg) {
