@@ -21,6 +21,18 @@ var enableTP = document.querySelector('#enableTP');
 
 function saveOptions(e) {
     e.preventDefault();
+
+    let domains = {
+        global: "translate.google.com",
+        china: "translate.google.cn"
+    };
+
+    let selectedDomain = document.querySelector('input[name=selectedDomain]:checked').value;
+    if(!domains.hasOwnProperty(selectedDomain)){
+        selectedDomain = "global";
+    }
+    gtDomain = domains[selectedDomain];
+
     storage.set({
         'pageLang': pageLang.value,
         'userLang': userLang.value,
@@ -30,56 +42,15 @@ function saveOptions(e) {
         'enableTT': enableTT.checked,
         'enableTTS': enableTTS.checked,
         'enableTP': enableTP.checked,
+        'selectedDomain': selectedDomain,
+        'gtDomain': domains[selectedDomain],
         'translateURL': `https://${gtDomain}/?sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
         'translatePageURL': `https://${gtDomain}/translate?sl=${TPpageLang.value}&tl=${TPuserLang.value}&u=`
     }, function () {
-        updateContextMenuTitle('translate', 
-            chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]));
-        updateContextMenuTitle('tts', 
-            chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value));
-        updateContextMenuTitle('translatePage',
-            chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang.value, TPuserLang.value]));
-        updateContextMenuTitle('translatePageLink',
-            chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang.value, TPuserLang.value]));
+
         showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
-
-        if (enableTT.checked == false) {
-            removeContextMenu('translate');
-        } else {
-            chrome.contextMenus.create({
-                id: 'translate',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang.value, userLang.value]),
-                contexts: ['selection']
-            });
-        }
-
-        if (enableTTS.checked == false) {
-            removeContextMenu('tts');
-        } else {
-            chrome.contextMenus.create({
-                id: 'tts',
-                title: chrome.i18n.getMessage('contextMenuTitleTextToSpeech', ttsLang.value),
-                contexts: ['selection']
-            });
-        }
-
-        if (enableTP.checked == false) {
-            removeContextMenu('translatePage');
-            removeContextMenu('translatePageLink');
-        } else {
-            chrome.contextMenus.create({
-                id: 'translatePage',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang.value, TPuserLang.value]),
-                contexts: ['all']
-            });
-
-            chrome.contextMenus.create({
-                id: 'translatePageLink',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang.value, TPuserLang.value]),
-                contexts: ['link']
-            });
-        }
+        chrome.extension.getBackgroundPage().window.location.reload()
         
     });
 }
@@ -128,6 +99,7 @@ function loadOptions() {
                 'enableTT': true,
                 'enableTTS': true,
                 'enableTP': true,
+                'selectedDomain': 'global',
                 'gtDomain': getGoogleTranslatorDomain()
             }, function (items) {
                 pageLang.value = items.pageLang;
@@ -139,23 +111,14 @@ function loadOptions() {
                 enableTTS.checked = items.enableTTS;
                 enableTP.checked = items.enableTP;
                 gtDomain = items.gtDomain;
+                document.querySelector(`input[name=selectedDomain][value="${items.selectedDomain}"]`).checked = true
             });
 
     });
 }
 
-function updateContextMenuTitle(id, value) {
-    chrome.contextMenus.update(id, {
-        title: value
-    });
-}
-
-function removeContextMenu(id) {
-    chrome.contextMenus.remove(id);
-}
-
 function showMessage(msg) {
-    var message = document.querySelector('#message');
+    let message = document.querySelector('#message');
     message.innerText = msg;
     message.style.display = 'block';
     setTimeout(function () {
@@ -164,7 +127,7 @@ function showMessage(msg) {
 }
 
 function getGoogleTranslatorDomain() {
-    var offset = new Date().getTimezoneOffset();
+    let offset = new Date().getTimezoneOffset();
     // Domain for China
     if (offset/60 == -8) {
         return "translate.google.cn"; 
