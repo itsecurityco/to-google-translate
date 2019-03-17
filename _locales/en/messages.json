@@ -79,6 +79,20 @@
         "message": "Set the From field to 'auto' to use when encountering multiple languages.",
         "description": "Notice message for language settings"
     },
+
+    "optionsSelectedDomainCaption": {
+        "message": "Domain",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Global",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
+    },
+
     "optionsTTCaption": {
         "message": "Translate Text",
         "description": "Caption for text translation"

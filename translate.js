@@ -28,7 +28,8 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-var storage = chrome.storage.local;
+var storage = chrome.storage.local,
+    gtDomain = getGoogleTranslatorDomain();
 
 storage.get({
     'pageLang': 'auto',
@@ -38,7 +39,8 @@ storage.get({
     'TPuserLang': 'es',
     'enableTT': true,
     'enableTTS': true,
-    'enableTP': true
+    'enableTP': true,
+    'gtDomain': getGoogleTranslatorDomain()
 }, function (items) {
     var pageLang = items.pageLang,
         userLang = items.userLang,
@@ -87,7 +89,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     if (info.menuItemId == 'translate') {
         storage.get({
-            'translateURL': `https://${getGoogleTranslatorDomain()}/?sl=auto&tl=es&text=`
+            'translateURL': `https://${gtDomain}/?sl=auto&tl=es&text=`
         }, function (item) {
             tabCreateWithOpenerTabId(item.translateURL+encodeURIComponent(selectedText), tab);
         });
@@ -95,7 +97,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     if (info.menuItemId == 'tts') {
         storage.get({
-            'ttsURL': `https://${getGoogleTranslatorDomain()}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
+            'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en&q=`
         }, function (item) {
             tabCreateWithOpenerTabId(item.ttsURL+encodeURIComponent(selectedText)+'&textlen='+selectedText.length, tab);
         });
@@ -103,7 +105,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     if (info.menuItemId == 'translatePage') {
         storage.get({
-            'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
+            'translatePageURL': `https://${gtDomain}/translate?sl=auto&tl=es&u=`
         }, function (item) {
             tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(info.pageUrl), tab);
         });
@@ -111,7 +113,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     if (info.menuItemId == 'translatePageLink') {
         storage.get({
-            'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
+            'translatePageURL': `https://${gtDomain}/translate?sl=auto&tl=es&u=`
         }, function (item) {
             tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(info.linkUrl), tab);
         });

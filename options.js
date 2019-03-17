@@ -21,6 +21,18 @@ var enableTP = document.querySelector('#enableTP');
 
 function saveOptions(e) {
     e.preventDefault();
+
+    let domains = {
+        global: "translate.google.com",
+        china: "translate.google.cn"
+    };
+
+    let selectedDomain = document.querySelector('input[name=selectedDomain]:checked').value;
+    if(!domains.hasOwnProperty(selectedDomain)){
+        selectedDomain = "global";
+    }
+    gtDomain = domains[selectedDomain];
+
     storage.set({
         'pageLang': pageLang.value,
         'userLang': userLang.value,
@@ -30,6 +42,8 @@ function saveOptions(e) {
         'enableTT': enableTT.checked,
         'enableTTS': enableTTS.checked,
         'enableTP': enableTP.checked,
+        'selectedDomain': selectedDomain,
+        'gtDomain': domains[selectedDomain],
         'translateURL': `https://${gtDomain}/?sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
         'translatePageURL': `https://${gtDomain}/translate?sl=${TPpageLang.value}&tl=${TPuserLang.value}&u=`
@@ -128,6 +142,7 @@ function loadOptions() {
                 'enableTT': true,
                 'enableTTS': true,
                 'enableTP': true,
+                'selectedDomain': 'global',
                 'gtDomain': getGoogleTranslatorDomain()
             }, function (items) {
                 pageLang.value = items.pageLang;
@@ -139,6 +154,7 @@ function loadOptions() {
                 enableTTS.checked = items.enableTTS;
                 enableTP.checked = items.enableTP;
                 gtDomain = items.gtDomain;
+                document.querySelector(`input[name=selectedDomain][value="${items.selectedDomain}"]`).checked = true
             });
 
     });
@@ -155,7 +171,7 @@ function removeContextMenu(id) {
 }
 
 function showMessage(msg) {
-    var message = document.querySelector('#message');
+    let message = document.querySelector('#message');
     message.innerText = msg;
     message.style.display = 'block';
     setTimeout(function () {
@@ -164,7 +180,7 @@ function showMessage(msg) {
 }
 
 function getGoogleTranslatorDomain() {
-    var offset = new Date().getTimezoneOffset();
+    let offset = new Date().getTimezoneOffset();
     // Domain for China
     if (offset/60 == -8) {
         return "translate.google.cn"; 
