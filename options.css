@@ -60,6 +60,10 @@ input {
     text-align: center;
 }
 
+.select-lang{
+    width: 12em;
+}
+
 .button {
     border-style: hidden;
     background-color: rgb(76, 175, 80);

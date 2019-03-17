@@ -19,10 +19,10 @@
           __MSG_optionsTTCaption__
         </td>
         <td class="col2">
-          <label>__MSG_optionsPageLang__ <input type="text" id="pageLang" maxlength="12" size="12" required /></label>
+          <label>__MSG_optionsPageLang__ <select class="select-lang" name="pageLang" id="pageLang" required></select></label>
         </td>
         <td class="col3">
-          <label>__MSG_optionsUserLang__ <input type="text" id="userLang"  maxlength="12" size="12" required /></label>
+          <label>__MSG_optionsUserLang__ <select class="select-lang" name="userLang" id="userLang" required></select></label>
         </td>
         <td>
           <label><input type="checkbox" name="enableTT" id="enableTT"> __MSG_optionsEnableTT__</label>
@@ -33,11 +33,25 @@
           __MSG_optionsTTSCaption__
         </td>
         <td class="col2">
-          <input type="text" id="ttsLang"  maxlength="12" size="12" required/>
+          <select class="select-lang" name="ttsLang" id="ttsLang" required></select>
         </td>
         <td class="col3"></td>
         <td>
           <label><input type="checkbox" name="enableTTS" id="enableTTS"> __MSG_optionsEnableTTS__</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          __MSG_optionsTPCaption__
+        </td>
+        <td class="col2">
+          <label>__MSG_optionsTPPageLang__ <select class="select-lang" name="TPpageLang" id="TPpageLang" required></select></label>
+        </td>
+        <td class="col3">
+          <label>__MSG_optionsTPUserLang__ <select class="select-lang" name="TPuserLang" id="TPuserLang" required></select></label>
+        </td>
+        <td>
+          <label><input type="checkbox" name="enableTP" id="enableTP"> __MSG_optionsEnableTP__</label>
         </td>
       </tr>
       <tr>

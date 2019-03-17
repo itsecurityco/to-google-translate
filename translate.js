@@ -33,16 +33,22 @@ var storage = chrome.storage.local;
 storage.get({
     'pageLang': 'auto',
     'userLang': 'es',
-    'ttsLang': 'en',
+    'ttsLang': 'en-US',
+    'TPpageLang': 'auto',
+    'TPuserLang': 'es',
     'enableTT': true,
-    'enableTTS': true
+    'enableTTS': true,
+    'enableTP': true
 }, function (items) {
     var pageLang = items.pageLang,
         userLang = items.userLang,
-        ttsLang = items.ttsLang;
-        enableTT = items.enableTT;
-        enableTTS = items.enableTTS;
-    
+        ttsLang = items.ttsLang,
+        TPpageLang = items.TPpageLang,
+        TPuserLang = items.TPuserLang,
+        enableTT = items.enableTT,
+        enableTTS = items.enableTTS,
+        enableTP = items.enableTP;
+
     // create Translate context menu
     if (enableTT == true) {
         chrome.contextMenus.create({
@@ -59,12 +65,26 @@ storage.get({
             contexts: ['selection']
         });
     }
+    // create Translate Page context menu
+    if (enableTP == true) {
+        chrome.contextMenus.create({
+            id: 'translatePage',
+            title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang, TPuserLang]),
+            contexts: ['all']
+        });
+
+        chrome.contextMenus.create({
+            id: 'translatePageLink',
+            title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang, TPuserLang]),
+            contexts: ['link']
+        });
+    }
 });
 
-// manage clic context menu
+// manage click context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var selectedText = info.selectionText;
-    
+
     if (info.menuItemId == 'translate') {
         storage.get({
             'translateURL': `https://${getGoogleTranslatorDomain()}/?sl=auto&tl=es&text=`
@@ -79,6 +99,28 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         }, function (item) {
             tabCreateWithOpenerTabId(item.ttsURL+encodeURIComponent(selectedText)+'&textlen='+selectedText.length, tab);
         });
+    }
+
+    if (info.menuItemId == 'translatePage') {
+        storage.get({
+            'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
+        }, function (item) {
+            tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(info.pageUrl), tab);
+        });
+    }
+
+    if (info.menuItemId == 'translatePageLink') {
+        storage.get({
+            'translatePageURL': `https://${getGoogleTranslatorDomain()}/translate?sl=auto&tl=es&u=`
+        }, function (item) {
+            tabCreateWithOpenerTabId(item.translatePageURL+encodeURIComponent(info.linkUrl), tab);
+        });
+    }
+});
+
+chrome.runtime.onInstalled.addListener(function(info){
+    if(info.reason === "install"){
+        chrome.runtime.openOptionsPage();
     }
 });
 
@@ -96,21 +138,14 @@ function getGoogleTranslatorDomain() {
 // Create a tab with openerTabId if version of Firefox is above 57
 // https://github.com/itsecurityco/to-google-translate/pull/19
 function tabCreateWithOpenerTabId(uri, tab) {
-    function gotBrowserInfo(info) {
-        FirefoxVersion = Math.round(parseInt(info.version));
-        if (FirefoxVersion < 57) {
-            // openerTabId not supported
-            chrome.tabs.create({
-                url: uri
-            });
-        } else {
+    browser.runtime.getBrowserInfo().then(info => {
+        let newTabConfig = {
+            url: uri
+        };
+        if (Math.round(parseInt(info.version)) > 56) {
             // openerTabId supported
-            chrome.tabs.create({
-                url: uri,
-                openerTabId: tab.id
-            });
+            newTabConfig.openerTabId = tab.id;
         }
-    }
-    var gettingInfo = browser.runtime.getBrowserInfo();
-    gettingInfo.then(gotBrowserInfo);
+        chrome.tabs.create(newTabConfig);
+    });
 }
