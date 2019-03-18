@@ -30,3 +30,7 @@ Run in the root folder extension the command
 ```sh
 web-ext run
 ```
+
+### Contributors of new features
+1. [chr314](https://github.com/chr314)
+2. [piroor](https://github.com/piroor)
