@@ -33,10 +33,10 @@ var storage = chrome.storage.local,
 
 storage.get({
     'pageLang': 'auto',
-    'userLang': 'es',
+    'userLang': getDefaultLanguage(),
     'ttsLang': 'en-US',
     'TPpageLang': 'auto',
-    'TPuserLang': 'es',
+    'TPuserLang': getDefaultLanguage(),
     'enableTT': true,
     'enableTTS': true,
     'enableTP': true,
@@ -140,6 +140,10 @@ function getGoogleTranslatorDomain() {
     } else { 
         return "translate.google.com"; 
     }
+}
+
+function getDefaultLanguage() {
+    return navigator.language.toLowerCase().split('-')[0];
 }
 
 // Create a tab with openerTabId if version of Firefox is above 57

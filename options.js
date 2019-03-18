@@ -90,12 +90,14 @@ function loadOptions() {
                 TPuserLang.add(option.cloneNode(true));
             }
 
+            let defaultLanguage = languages.text.find(o => o.code === getDefaultLanguage()) ? getDefaultLanguage() : "es";
+
             storage.get({
                 'pageLang': 'auto',
-                'userLang': 'es',
+                'userLang': defaultLanguage,
                 'ttsLang': 'en-US',
                 'TPpageLang': 'auto',
-                'TPuserLang': 'es',
+                'TPuserLang': defaultLanguage,
                 'enableTT': true,
                 'enableTTS': true,
                 'enableTP': true,
@@ -124,6 +126,10 @@ function showMessage(msg) {
     setTimeout(function () {
         message.style.display = 'none';
     }, 3000);
+}
+
+function getDefaultLanguage() {
+    return navigator.language.toLowerCase().split('-')[0];
 }
 
 function getGoogleTranslatorDomain() {
