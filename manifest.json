@@ -22,9 +22,25 @@
         "scripts": ["translate.js"]
     },
 
+    "browser_action": {
+        "default_title": "Google Translate",
+        "default_icon": {
+            "16": "icons/logo-16.png",
+            "32": "icons/logo-32.png",
+            "48": "icons/logo-48.png",
+            "96": "icons/logo-96.png"
+        },
+        "default_popup": "popup.html"
+    },
+
     "permissions": [
         "contextMenus",
-        "storage"
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "https://translate.google.com/*",
+        "https://translate.google.cn/*"
+
     ],
 
     "web_accessible_resources": ["icons/help.png", "supported_languages.json"],
