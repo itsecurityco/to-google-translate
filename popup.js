@@ -1,12 +1,9 @@
-browser.webRequest.onHeadersReceived.addListener(
-    function (info) {
-        let headers = info.responseHeaders;
-        for (let i = headers.length - 1; i >= 0; --i) {
-            let header = headers[i].name.toLowerCase();
-            if (header == 'x-frame-options' || header == 'frame-options') {
-                headers.splice(i, 1);
+browser.webRequest.onHeadersReceived.addListener(info => {
+        let headers = info.responseHeaders.filter(header => {
+                let name = header.name.toLowerCase();
+                return name !== 'x-frame-options' && name !== 'frame-options';
             }
-        }
+        );
         return {responseHeaders: headers};
     },
     {
