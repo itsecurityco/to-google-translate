@@ -14,9 +14,9 @@ browser.webRequest.onHeadersReceived.addListener(info => {
 );
 
 document.addEventListener("DOMContentLoaded", function () {
-    chrome.storage.local.get('gtDomain', items => {
-        if (items.gtDomain) {
-            document.getElementById("google_translate").src = "https://" + items.gtDomain;
+    chrome.storage.local.get('translateURL', items => {
+        if (items.translateURL) {
+            document.getElementById("google_translate").src = items.translateURL;
         }
     });
 });
