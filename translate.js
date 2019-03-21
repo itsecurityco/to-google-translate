@@ -35,8 +35,8 @@ storage.get({
     'pageLang': 'auto',
     'userLang': getDefaultLanguage(),
     'ttsLang': 'en-US',
-    'TPpageLang': 'auto',
-    'TPuserLang': getDefaultLanguage(),
+    'tpPageLang': 'auto',
+    'tpUserLang': getDefaultLanguage(),
     'enableTT': true,
     'enableTTS': true,
     'enableTP': true,
@@ -45,8 +45,8 @@ storage.get({
     var pageLang = items.pageLang,
         userLang = items.userLang,
         ttsLang = items.ttsLang,
-        TPpageLang = items.TPpageLang,
-        TPuserLang = items.TPuserLang,
+        tpPageLang = items.tpPageLang,
+        tpUserLang = items.tpUserLang,
         enableTT = items.enableTT,
         enableTTS = items.enableTTS,
         enableTP = items.enableTP;
@@ -74,13 +74,13 @@ storage.get({
         if (enableTP) {
             chrome.contextMenus.create({
                 id: 'translatePage',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [TPpageLang, TPuserLang]),
+                title: chrome.i18n.getMessage('contextMenuTitleTranslatePage', [tpPageLang, tpUserLang]),
                 contexts: ['all']
             });
 
             chrome.contextMenus.create({
                 id: 'translatePageLink',
-                title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [TPpageLang, TPuserLang]),
+                title: chrome.i18n.getMessage('contextMenuTitleTranslatePageLink', [tpPageLang, tpUserLang]),
                 contexts: ['link']
             });
         }

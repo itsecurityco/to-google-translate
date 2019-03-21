@@ -13,8 +13,8 @@ var storage = chrome.storage.local;
 var pageLang = document.querySelector('#pageLang');
 var userLang = document.querySelector('#userLang');
 var ttsLang = document.querySelector('#ttsLang');
-var TPpageLang = document.querySelector('#TPpageLang');
-var TPuserLang = document.querySelector('#TPuserLang');
+var tpPageLang = document.querySelector('#tpPageLang');
+var tpUserLang = document.querySelector('#tpUserLang');
 var enableTT = document.querySelector('#enableTT');
 var enableTTS = document.querySelector('#enableTTS');
 var enableTP = document.querySelector('#enableTP');
@@ -37,8 +37,8 @@ function saveOptions(e) {
         'pageLang': pageLang.value,
         'userLang': userLang.value,
         'ttsLang': ttsLang.value,
-        'TPpageLang': TPpageLang.value,
-        'TPuserLang': TPuserLang.value,
+        'tpPageLang': tpPageLang.value,
+        'tpUserLang': tpUserLang.value,
         'enableTT': enableTT.checked,
         'enableTTS': enableTTS.checked,
         'enableTP': enableTP.checked,
@@ -46,7 +46,7 @@ function saveOptions(e) {
         'gtDomain': domains[selectedDomain],
         'translateURL': `https://${gtDomain}/#view=home&op=translate&sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
-        'translatePageURL': `https://${gtDomain}/translate?sl=${TPpageLang.value}&tl=${TPuserLang.value}&u=`
+        'translatePageURL': `https://${gtDomain}/translate?sl=${tpPageLang.value}&tl=${tpUserLang.value}&u=`
     }, function () {
 
         showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
@@ -79,15 +79,15 @@ function loadOptions() {
             let autoOption = createOption("Auto", "auto")
 
             pageLang.add(autoOption.cloneNode(true));
-            TPpageLang.add(autoOption.cloneNode(true));
+            tpPageLang.add(autoOption.cloneNode(true));
             ttsLang.add(autoOption.cloneNode(true));
 
             for(let option of textOptions){
                 pageLang.add(option.cloneNode(true));
                 userLang.add(option.cloneNode(true));
 
-                TPpageLang.add(option.cloneNode(true));
-                TPuserLang.add(option.cloneNode(true));
+                tpPageLang.add(option.cloneNode(true));
+                tpUserLang.add(option.cloneNode(true));
             }
 
             let defaultLanguage = languages.text.find(o => o.code === getDefaultLanguage()) ? getDefaultLanguage() : "es";
@@ -96,8 +96,8 @@ function loadOptions() {
                 'pageLang': 'auto',
                 'userLang': defaultLanguage,
                 'ttsLang': 'en-US',
-                'TPpageLang': 'auto',
-                'TPuserLang': defaultLanguage,
+                'tpPageLang': 'auto',
+                'tpUserLang': defaultLanguage,
                 'enableTT': true,
                 'enableTTS': true,
                 'enableTP': true,
@@ -107,8 +107,8 @@ function loadOptions() {
                 pageLang.value = items.pageLang;
                 userLang.value = items.userLang;
                 ttsLang.value = items.ttsLang;
-                TPpageLang.value = items.TPpageLang;
-                TPuserLang.value = items.TPuserLang;
+                tpPageLang.value = items.tpPageLang;
+                tpUserLang.value = items.tpUserLang;
                 enableTT.checked = items.enableTT;
                 enableTTS.checked = items.enableTTS;
                 enableTP.checked = items.enableTP;
