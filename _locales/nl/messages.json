@@ -17,7 +17,7 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "es"
+                "example": "nl"
             }
         }
     },
@@ -31,6 +31,34 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "Deze pagina vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "nl"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Koppeling vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "nl"
+            }
+        }
+    },
     "optionsPageTitle": {
         "message": "To Google Translate - Optiespagina",
         "description": "Title of the options page itself."
@@ -40,8 +68,20 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Stel het Van-veld in op ‘auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
+        "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
         "description": "Notice message for language settings"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Domein",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Globaal",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
     },
     "optionsTTCaption": {
         "message": "Tekst vertalen",
@@ -66,6 +106,22 @@
     "optionsEnableTTS": {
         "message": "Inschakelen",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Pagina vertalen",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Van",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Naar",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Inschakelen",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "Opslaan",
