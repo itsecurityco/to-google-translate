@@ -1,12 +1,14 @@
 class Config {
 
-    constructor(ready_cb = null) {
-        this.getOptions().then(config => {
-            this.config = config;
-            if (ready_cb && typeof ready_cb === "function") {
-                ready_cb(this.config);
-            }
-        });
+    constructor(loadConfig = true, ready_cb = null) {
+        if(loadConfig) {
+            this.getOptions().then(config => {
+                this.config = config;
+                if (ready_cb && typeof ready_cb === "function") {
+                    ready_cb(this.config);
+                }
+            });
+        }
     }
 
     async getOptions() {
