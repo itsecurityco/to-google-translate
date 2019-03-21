@@ -3,12 +3,10 @@
         "message": "Para o Google Tradutor",
         "description": "Nome da extensão"
     },
-
     "extensionDescription": {
         "message": "Selecione o texto em uma página da Web e envie-a para o Google Tradutor ou ouça a sua pronúncia.",
         "description": "Descrição da extensão."
     },
-
     "contextMenuTitleTranslate": {
         "message": "Traduzir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
@@ -23,7 +21,6 @@
             }
         }
     },
-
     "contextMenuTitleTextToSpeech": {
         "message": "Ouvir pronúncia ($TTS_LANG$)",
         "description": "The contextMenus title.",
@@ -34,17 +31,14 @@
             }
         }
     },
-
     "optionsPageTitle": {
         "message": "To Google Translate - Options page",
         "description": "Title of the options page itself."
     },
-
     "optionsTitle": {
         "message": "Settings",
         "description": "Visible title in the options page."
     },
-
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Set the From field to 'auto' to use when encountering multiple languages.",
         "description": "Notice message for language settings"
@@ -65,7 +59,6 @@
         "message": "Enable",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
-
     "optionsTTSCaption": {
         "message": "Text To Speech",
         "description": "Caption for text to speech"
@@ -74,12 +67,10 @@
         "message": "Enable",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
-
     "optionsSubmit": {
         "message": "Save",
         "description": "Label for the button to save settings"
     },
-
     "optionsMessageSaved": {
         "message": "Settings saved",
         "description": "Message to be shown after settings are successfully saved"

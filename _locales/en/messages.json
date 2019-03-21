@@ -3,12 +3,10 @@
         "message": "To Google Translate",
         "description": "Name of the extension"
     },
-
     "extensionDescription": {
         "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation.",
         "description": "Description of the extension."
     },
-
     "contextMenuTitleTranslate": {
         "message": "Translate ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
@@ -23,7 +21,6 @@
             }
         }
     },
-
     "contextMenuTitleTextToSpeech": {
         "message": "Listen ($TTS_LANG$)",
         "description": "The contextMenus title.",
@@ -34,7 +31,6 @@
             }
         }
     },
-
     "contextMenuTitleTranslatePage": {
         "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
@@ -49,7 +45,6 @@
             }
         }
     },
-
     "contextMenuTitleTranslatePageLink": {
         "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
@@ -64,22 +59,18 @@
             }
         }
     },
-
     "optionsPageTitle": {
         "message": "To Google Translate - Options page",
         "description": "Title of the options page itself."
     },
-
     "optionsTitle": {
         "message": "Settings",
         "description": "Visible title in the options page."
     },
-
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Set the From field to 'auto' to use when encountering multiple languages.",
         "description": "Notice message for language settings"
     },
-
     "optionsSelectedDomainCaption": {
         "message": "Domain",
         "description": "Caption domain"
@@ -92,7 +83,6 @@
         "message": "China",
         "description": "Preceding label for china domain"
     },
-
     "optionsTTCaption": {
         "message": "Translate Text",
         "description": "Caption for text translation"
@@ -109,7 +99,6 @@
         "message": "Enable",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
-
     "optionsTTSCaption": {
         "message": "Text To Speech",
         "description": "Caption for text to speech"
@@ -118,7 +107,6 @@
         "message": "Enable",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
-
     "optionsTPCaption": {
         "message": "Translate Page",
         "description": "Caption for text translation"
@@ -135,12 +123,10 @@
         "message": "Enable",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
-
     "optionsSubmit": {
         "message": "Save",
         "description": "Label for the button to save settings"
     },
-
     "optionsMessageSaved": {
         "message": "Settings saved",
         "description": "Message to be shown after settings are successfully saved"
