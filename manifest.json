@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "3.3",
+    "version": "3.7",
     "author": "Juan Escobar",
     "homepage_url": "https://github.com/itsecurityco/to-google-translate",
     "default_locale": "en",
