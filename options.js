@@ -44,7 +44,7 @@ function saveOptions(e) {
         'enableTP': enableTP.checked,
         'selectedDomain': selectedDomain,
         'gtDomain': domains[selectedDomain],
-        'translateURL': `https://${gtDomain}/?sl=${pageLang.value}&tl=${userLang.value}&text=`,
+        'translateURL': `https://${gtDomain}/#view=home&op=translate&sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
         'translatePageURL': `https://${gtDomain}/translate?sl=${TPpageLang.value}&tl=${TPuserLang.value}&u=`
     }, function () {
