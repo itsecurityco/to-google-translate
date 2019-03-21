@@ -2,26 +2,22 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "3.7",
+    "version": "3.8",
     "author": "Juan Escobar",
     "homepage_url": "https://github.com/itsecurityco/to-google-translate",
     "default_locale": "en",
-
     "icons": {
         "16": "icons/logo-16.png",
         "32": "icons/logo-32.png",
         "48": "icons/logo-48.png",
         "96": "icons/logo-96.png"
     },
-
     "options_ui": {
         "page": "options.html"
     },
-
     "background": {
         "scripts": ["translate.js"]
     },
-
     "browser_action": {
         "default_title": "Google Translate",
         "default_icon": {
@@ -32,7 +28,6 @@
         },
         "default_popup": "popup.html"
     },
-
     "permissions": [
         "contextMenus",
         "storage",
@@ -40,11 +35,8 @@
         "webRequestBlocking",
         "https://translate.google.com/*",
         "https://translate.google.cn/*"
-
     ],
-
     "web_accessible_resources": ["icons/help.png", "supported_languages.json"],
-
     "applications": {
         "gecko": {
             "id": "jid1-93WyvpgvxzGATw@jetpack"
