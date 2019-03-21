@@ -31,6 +31,34 @@
             }
         }
     },
+        "contextMenuTitleTranslatePage": {
+        "message": "Traducir esta página ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Traducir enlace ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
         "message": "Al Traductor de Google - Página de opciones",
         "description": "Title of the options page itself."
@@ -42,6 +70,18 @@
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Configure el campo Origen en 'auto' para usar cuando utilice varios idiomas.",
         "description": "Notice message for language settings"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Dominio",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Global",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
     },
     "optionsTTCaption": {
         "message": "Traducir Texto",
@@ -66,6 +106,22 @@
     "optionsEnableTTS": {
         "message": "Habilitar",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Traducir Página",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Origen",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Destino",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Habilitar",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "Guardar",
