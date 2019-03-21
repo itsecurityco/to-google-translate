@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #google_translate {
+            width: 700px;
+            height: 550px;
+            border: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #loading-wrap {
+            margin: 0;
+            background: url(icons/loading.gif) center center no-repeat;
+        }
+    </style>
+    <script src="popup.js"></script>
+    <title>Google Translate</title>
+</head>
+<body>
+<div id="loading-wrap">
+    <iframe id="google_translate" src="https://translate.google.com/"></iframe>
+</div>
+</body>
+</html>
