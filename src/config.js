@@ -57,18 +57,10 @@ class Config {
         promises.push(Config.getOptions().then(config => {
             return Config.config = config;
         }));
-        promises.push(Config.getSupportedLanguages().then(languages => {
+        promises.push(Config.getLanguages().then(languages => {
             return Config.supportedLanguages = languages;
         }));
         return Promise.all(promises);
-    }
-
-    static async getSupportedLanguages() {
-        return fetch(chrome.runtime.getURL('supported_languages.json'))
-            .then(response => response.json())
-            .then(languages => {
-                return languages;
-            });
     }
 
     static async getLanguages() {
