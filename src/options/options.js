@@ -1,23 +1,13 @@
 /**
-* Juan Escobar (https://github.com/itseco)
-*
-* @link      https://github.com/itseco/to-google-translate
-* @copyright Copyright (c) 2017, Juan Escobar.  All rights reserved.
-* @license   Copyrights licensed under the New BSD License.
-*/
+ * Juan Escobar (https://github.com/itseco)
+ *
+ * @link      https://github.com/itseco/to-google-translate
+ * @copyright Copyright (c) 2017, Juan Escobar.  All rights reserved.
+ * @license   Copyrights licensed under the New BSD License.
+ */
 
 document.addEventListener('DOMContentLoaded', loadOptions);
-document.querySelector('form').addEventListener('submit', saveOptions);
-
-var storage = chrome.storage.local;
-var pageLang = document.querySelector('#pageLang');
-var userLang = document.querySelector('#userLang');
-var ttsLang = document.querySelector('#ttsLang');
-var tpPageLang = document.querySelector('#tpPageLang');
-var tpUserLang = document.querySelector('#tpUserLang');
-var enableTT = document.querySelector('#enableTT');
-var enableTTS = document.querySelector('#enableTTS');
-var enableTP = document.querySelector('#enableTP');
+let pageLang, userLang, ttsLang, tpPageLang, tpUserLang, enableTT, enableTTS, enableTP;
 
 function saveOptions(e) {
     e.preventDefault();
@@ -28,12 +18,13 @@ function saveOptions(e) {
     };
 
     let selectedDomain = document.querySelector('input[name=selectedDomain]:checked').value;
-    if(!domains.hasOwnProperty(selectedDomain)){
+    if (!domains.hasOwnProperty(selectedDomain)) {
         selectedDomain = "global";
     }
-    gtDomain = domains[selectedDomain];
 
-    storage.set({
+    let gtDomain = domains[selectedDomain];
+
+    Config.setOptions({
         'pageLang': pageLang.value,
         'userLang': userLang.value,
         'ttsLang': ttsLang.value,
@@ -43,80 +34,76 @@ function saveOptions(e) {
         'enableTTS': enableTTS.checked,
         'enableTP': enableTP.checked,
         'selectedDomain': selectedDomain,
-        'gtDomain': domains[selectedDomain],
+        'gtDomain': gtDomain,
         'translateURL': `https://${gtDomain}/#view=home&op=translate&sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
         'translatePageURL': `https://${gtDomain}/translate?sl=${tpPageLang.value}&tl=${tpUserLang.value}&u=`
-    }, function () {
+    })
+        .then(() => {
+            showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
+            chrome.extension.getBackgroundPage().window.location.reload()
+        });
 
-        showMessage(chrome.i18n.getMessage('optionsMessageSaved'));
-        chrome.extension.getBackgroundPage().window.location.reload()
-        
-    });
 }
 
 function loadOptions() {
-    fetch(chrome.runtime.getURL('supported_languages.json'))
-        .then(response => response.json())
-        .then(languages => {
 
-            let textOptions = [];
-            function createOption(text,value) {
-                let option = document.createElement("option");
-                option.text = text;
-                option.value = value;
-                return option;
-            }
+    document.querySelector('form').addEventListener('submit', saveOptions);
 
-            for(let lang of languages.text){
-                textOptions.push(createOption(lang.language, lang.code));
-            }
+    pageLang = document.querySelector('#pageLang');
+    userLang = document.querySelector('#userLang');
+    ttsLang = document.querySelector('#ttsLang');
+    tpPageLang = document.querySelector('#tpPageLang');
+    tpUserLang = document.querySelector('#tpUserLang');
+    enableTT = document.querySelector('#enableTT');
+    enableTTS = document.querySelector('#enableTTS');
+    enableTP = document.querySelector('#enableTP');
 
-            for(let lang of languages.tts){
-                ttsLang.add(createOption(lang.language, lang.code));
-            }
+    new Config(true, config => {
 
-            let autoOption = createOption("Auto", "auto")
+        let textOptions = [];
 
-            pageLang.add(autoOption.cloneNode(true));
-            tpPageLang.add(autoOption.cloneNode(true));
-            ttsLang.add(autoOption.cloneNode(true));
+        function createOption(text, value) {
+            let option = document.createElement("option");
+            option.text = text;
+            option.value = value;
+            return option;
+        }
 
-            for(let option of textOptions){
-                pageLang.add(option.cloneNode(true));
-                userLang.add(option.cloneNode(true));
+        for (let lang of Config.supportedLanguages.text) {
+            textOptions.push(createOption(lang.language, lang.code));
+        }
 
-                tpPageLang.add(option.cloneNode(true));
-                tpUserLang.add(option.cloneNode(true));
-            }
+        for (let lang of Config.supportedLanguages.tts) {
+            ttsLang.add(createOption(lang.language, lang.code));
+        }
 
-            let defaultLanguage = languages.text.find(o => o.code === getDefaultLanguage()) ? getDefaultLanguage() : "es";
+        let autoOption = createOption("Auto", "auto")
 
-            storage.get({
-                'pageLang': 'auto',
-                'userLang': defaultLanguage,
-                'ttsLang': 'en-US',
-                'tpPageLang': 'auto',
-                'tpUserLang': defaultLanguage,
-                'enableTT': true,
-                'enableTTS': true,
-                'enableTP': true,
-                'selectedDomain': 'global',
-                'gtDomain': getGoogleTranslatorDomain()
-            }, function (items) {
-                pageLang.value = items.pageLang;
-                userLang.value = items.userLang;
-                ttsLang.value = items.ttsLang;
-                tpPageLang.value = items.tpPageLang;
-                tpUserLang.value = items.tpUserLang;
-                enableTT.checked = items.enableTT;
-                enableTTS.checked = items.enableTTS;
-                enableTP.checked = items.enableTP;
-                gtDomain = items.gtDomain;
-                document.querySelector(`input[name=selectedDomain][value="${items.selectedDomain}"]`).checked = true
-            });
+        pageLang.add(autoOption.cloneNode(true));
+        tpPageLang.add(autoOption.cloneNode(true));
+        ttsLang.add(autoOption.cloneNode(true));
+
+        for (let option of textOptions) {
+            pageLang.add(option.cloneNode(true));
+            userLang.add(option.cloneNode(true));
+
+            tpPageLang.add(option.cloneNode(true));
+            tpUserLang.add(option.cloneNode(true));
+        }
+
+        pageLang.value = config.pageLang;
+        userLang.value = config.userLang;
+        ttsLang.value = config.ttsLang;
+        tpPageLang.value = config.tpPageLang;
+        tpUserLang.value = config.tpUserLang;
+        enableTT.checked = config.enableTT;
+        enableTTS.checked = config.enableTTS;
+        enableTP.checked = config.enableTP;
+        document.querySelector(`input[name=selectedDomain][value="${config.selectedDomain}"]`).checked = true
 
     });
+
 }
 
 function showMessage(msg) {
@@ -126,19 +113,4 @@ function showMessage(msg) {
     setTimeout(function () {
         message.style.display = 'none';
     }, 3000);
-}
-
-function getDefaultLanguage() {
-    return navigator.language.toLowerCase().split('-')[0];
-}
-
-function getGoogleTranslatorDomain() {
-    let offset = new Date().getTimezoneOffset();
-    // Domain for China
-    if (offset/60 == -8) {
-        return "translate.google.cn"; 
-    // Domain for rest of world
-    } else { 
-        return "translate.google.com"; 
-    }
 }
