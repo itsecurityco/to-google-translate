@@ -16,7 +16,10 @@
         "page": "src/options/options.html"
     },
     "background": {
-        "scripts": ["src/background/translate.js"]
+        "scripts": [
+          "src/config.js",
+          "src/background/translate.js"
+        ]
     },
     "browser_action": {
         "default_title": "Google Translate",
