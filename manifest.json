@@ -13,10 +13,13 @@
         "96": "icons/logo-96.png"
     },
     "options_ui": {
-        "page": "options.html"
+        "page": "src/options/options.html"
     },
     "background": {
-        "scripts": ["translate.js"]
+        "scripts": [
+          "src/config.js",
+          "src/background/translate.js"
+        ]
     },
     "browser_action": {
         "default_title": "Google Translate",
@@ -26,7 +29,7 @@
             "48": "icons/logo-48.png",
             "96": "icons/logo-96.png"
         },
-        "default_popup": "popup.html"
+        "default_popup": "src/popup/popup.html"
     },
     "permissions": [
         "contextMenus",

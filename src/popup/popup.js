@@ -14,9 +14,9 @@ browser.webRequest.onHeadersReceived.addListener(info => {
 );
 
 document.addEventListener("DOMContentLoaded", function () {
-    chrome.storage.local.get('translateURL', items => {
-        if (items.translateURL) {
-            document.getElementById("google_translate").src = items.translateURL;
+    Config.getOption('translateURL').then(value => {
+        if (value) {
+            document.getElementById("google_translate").src = value;
         }
     });
 });

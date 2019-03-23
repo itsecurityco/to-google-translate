@@ -7,7 +7,7 @@ body {
 }
 
 .icon {
-    background-image: url('icons/help.png');
+    background-image: url('../../icons/help.png');
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 22px;

@@ -7,7 +7,7 @@ build: prepare
 
 prepare: extlib/webextensions-lib-l10n/l10n.js
 	git submodule update
-	cp extlib/webextensions-lib-l10n/l10n.js ./
+	cp extlib/webextensions-lib-l10n/l10n.js ./src
 
 extlib/webextensions-lib-l10n/l10n.js:
 	git submodule update --init
