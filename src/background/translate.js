@@ -29,6 +29,26 @@
  */
 
 
+
+chrome.webRequest.onHeadersReceived.addListener(info => {
+        let headers = info.responseHeaders.filter(header => {
+                let name = header.name.toLowerCase();
+                return name !== 'x-frame-options' && name !== 'frame-options';
+            }
+        );
+        return {responseHeaders: headers};
+    },
+    {
+        urls: [
+            '*://translate.google.com/*',
+            '*://translate.google.cn/*'
+        ],
+        types: ['sub_frame']
+    },
+    ['blocking', 'responseHeaders']
+);
+
+
 new Config(true, items => {
 
     let {pageLang, userLang, ttsLang, tpPageLang, tpUserLang, enableTT, enableTTS, enableTP} = items;
