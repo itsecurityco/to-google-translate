@@ -31,15 +31,31 @@
         },
         "default_popup": "src/popup/popup.html"
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "exclude_matches": [
+                "*://translate.google.com/*",
+                "*://translate.google.cn/*"
+            ],
+            "js": ["src/config.js", "src/content/modal.js", "src/content/content.js"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
     "permissions": [
         "contextMenus",
         "storage",
         "webRequest",
         "webRequestBlocking",
+        "<all_urls>",
         "https://translate.google.com/*",
         "https://translate.google.cn/*"
     ],
-    "web_accessible_resources": ["icons/help.png", "supported_languages.json"],
+    "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html"],
     "applications": {
         "gecko": {
             "id": "jid1-93WyvpgvxzGATw@jetpack"
