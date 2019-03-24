@@ -95,17 +95,23 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     switch (info.menuItemId) {
         case 'translate':
-            tabCreateWithOpenerTabId(config.translateURL + encodeURIComponent(selectedText), tab);
+            openTranslate(config.translateURL + encodeURIComponent(selectedText), tab);
             break;
         case  'tts':
-            tabCreateWithOpenerTabId(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
+            openTranslate(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
             break;
         case 'translatePage':
-            tabCreateWithOpenerTabId(config.translatePageURL + encodeURIComponent(info.pageUrl), tab);
+            openTranslate(config.translatePageURL + encodeURIComponent(info.pageUrl), tab, true);
             break;
         case 'translatePageLink':
-            tabCreateWithOpenerTabId(config.translatePageURL + encodeURIComponent(info.linkUrl), tab);
+            openTranslate(config.translatePageURL + encodeURIComponent(info.linkUrl), tab, true);
             break;
+    }
+});
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if(request.action === 'newTab') {
+        chrome.tabs.create({ url: request.url });
     }
 });
 
@@ -114,6 +120,17 @@ chrome.runtime.onInstalled.addListener(function (info) {
         chrome.runtime.openOptionsPage();
     }
 });
+
+function openTranslate(url, tab, fullscreen = false) {
+    if (Config.config.openMode === "modal") {
+        chrome.tabs.sendMessage(tab.id, {
+            url: url,
+            fullscreen: fullscreen
+        });
+    } else {
+        tabCreateWithOpenerTabId(url, tab);
+    }
+}
 
 // Create a tab with openerTabId if version of Firefox is above 57
 // https://github.com/itsecurityco/to-google-translate/pull/19

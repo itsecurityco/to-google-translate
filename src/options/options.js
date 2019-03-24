@@ -18,6 +18,8 @@ function saveOptions(e) {
     };
 
     let selectedDomain = document.querySelector('input[name=selectedDomain]:checked').value;
+    let openMode = document.querySelector('input[name=openMode]:checked').value;
+
     if (!domains.hasOwnProperty(selectedDomain)) {
         selectedDomain = "global";
     }
@@ -34,6 +36,7 @@ function saveOptions(e) {
         'enableTTS': enableTTS.checked,
         'enableTP': enableTP.checked,
         'selectedDomain': selectedDomain,
+        'openMode': openMode,
         'gtDomain': gtDomain,
         'translateURL': `https://${gtDomain}/#view=home&op=translate&sl=${pageLang.value}&tl=${userLang.value}&text=`,
         'ttsURL': `https://${gtDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=${ttsLang.value}&q=`,
@@ -101,6 +104,7 @@ function loadOptions() {
         enableTTS.checked = config.enableTTS;
         enableTP.checked = config.enableTP;
         document.querySelector(`input[name=selectedDomain][value="${config.selectedDomain}"]`).checked = true
+        document.querySelector(`input[name=openMode][value="${config.openMode}"]`).checked = true
 
     });
 
