@@ -25,6 +25,7 @@ class Config {
                 'enableTT': true,
                 'enableTTS': true,
                 'enableTP': true,
+                'enableHotkeys': true,
                 'selectedDomain': 'global',
                 'openMode': 'modal',
                 'gtDomain': Config.getGoogleTranslatorDomain(),
