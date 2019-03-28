@@ -95,6 +95,18 @@
         "message": "New Tab",
         "description": "Preceding label for New Tab"
     },
+    "optionsEnableHotkeysCaption": {
+        "message": "Hotkeys",
+        "description": "Caption hotkeys"
+    },
+    "optionsEnableHotkeysDescription": {
+        "message": "Ctrl + Alt + C",
+        "description": "Hotkeys description"
+    },
+    "optionsEnableHotkeys": {
+        "message": "Enable",
+        "description": "Checkbox Label"
+    },
     "optionsTTCaption": {
         "message": "Translate Text",
         "description": "Caption for text translation"

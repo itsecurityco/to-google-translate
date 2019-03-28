@@ -37,11 +37,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "exclude_matches": [
-                "*://translate.google.com/*",
-                "*://translate.google.cn/*"
-            ],
-            "js": ["src/config.js", "src/content/modal.js", "src/content/content.js"],
+            "js": ["src/config.js", "src/content/modal.js", "src/content/content.js", "src/content/hotkeys.js"],
             "run_at": "document_end",
             "all_frames": true
         }
