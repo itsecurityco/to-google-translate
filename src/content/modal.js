@@ -26,8 +26,41 @@ class Modal {
 
                 this.shadow.innerHTML = html;
 
-                if(this.fullscreen){
+                if (this.fullscreen) {
                     this.shadow.querySelector(".modal").classList.add("modal-fullscreen");
+
+                    Config.loadConfig().then(() => {
+                        let pageLang = this.shadow.querySelector("#contentPageLang");
+                        let userLang = this.shadow.querySelector("#contentUserLang");
+
+                        let textOptions = [];
+
+                        function createOption(text, value) {
+                            let option = document.createElement("option");
+                            option.text = text;
+                            option.value = value;
+                            return option;
+                        }
+
+                        for (let lang of Config.supportedLanguages.text) {
+                            textOptions.push(createOption(lang.language, lang.code));
+                        }
+
+                        pageLang.add(createOption("Auto", "auto"));
+
+                        for (let option of textOptions) {
+                            pageLang.add(option.cloneNode(true));
+                            userLang.add(option.cloneNode(true));
+                        }
+
+                        pageLang.value = Config.config.pageLang;
+                        userLang.value = Config.config.userLang;
+
+                        let selectLang = this.shadow.querySelectorAll(".select-lang");
+                        selectLang[0].onchange = () => this.changeLanguage(pageLang.value, userLang.value);
+                        selectLang[1].onchange = () => this.changeLanguage(pageLang.value, userLang.value);
+
+                    });
                 }
 
                 this.shadow.querySelector(".modal-body").style.background = `url(${chrome.runtime.getURL('icons/loading.gif')}) center center no-repeat`;
@@ -45,6 +78,10 @@ class Modal {
 
                 return true;
             });
+    }
+
+    changeLanguage(from, to) {
+        this.shadow.querySelector("iframe").contentWindow.postMessage({action: "changeLang", from: from, to: to}, "*");
     }
 
     openNewTab() {

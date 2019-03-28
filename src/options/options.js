@@ -83,7 +83,7 @@ function loadOptions() {
             ttsLang.add(createOption(lang.language, lang.code));
         }
 
-        let autoOption = createOption("Auto", "auto")
+        let autoOption = createOption("Auto", "auto");
 
         pageLang.add(autoOption.cloneNode(true));
         tpPageLang.add(autoOption.cloneNode(true));

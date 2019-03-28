@@ -44,7 +44,9 @@
         {
             "matches": [
                 "*://translate.google.com/*",
-                "*://translate.google.cn/*"
+                "*://translate.google.cn/*",
+                "*://translate.googleusercontent.com/*",
+                "*://translate.googleusercontent.cn/*"
             ],
             "js": ["src/content/translate_frame.js"],
             "run_at": "document_end",
