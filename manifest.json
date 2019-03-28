@@ -38,7 +38,7 @@
                 "https://*/*"
             ],
             "js": ["src/config.js", "src/content/modal.js", "src/content/content.js", "src/content/hotkeys.js"],
-            "run_at": "document_end",
+            "run_at": "document_idle",
             "all_frames": true
         },
         {
@@ -52,13 +52,13 @@
         }
     ],
     "permissions": [
+        "<all_urls>",
         "contextMenus",
         "storage",
         "webRequest",
         "webRequestBlocking",
-        "<all_urls>",
-        "https://translate.google.com/*",
-        "https://translate.google.cn/*"
+        "*://translate.google.com/*",
+        "*://translate.google.cn/*"
     ],
     "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html"],
     "applications": {
