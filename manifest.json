@@ -54,13 +54,12 @@
         }
     ],
     "permissions": [
-        "<all_urls>",
+        "http://*/*",
+        "https://*/*",
         "contextMenus",
         "storage",
         "webRequest",
-        "webRequestBlocking",
-        "*://translate.google.com/*",
-        "*://translate.google.cn/*"
+        "webRequestBlocking"
     ],
     "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html"],
     "applications": {
