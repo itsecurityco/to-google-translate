@@ -15,9 +15,9 @@ class Modal {
             this.element = document.querySelector(targetSelector);
         } else {
             this.element = document.createElement("div");
+            document.body.appendChild(this.element);
         }
 
-        document.body.appendChild(this.element);
         this.shadow = this.element.attachShadow({mode: "open"});
 
         return fetch(chrome.runtime.getURL('src/content/modal.html'))
