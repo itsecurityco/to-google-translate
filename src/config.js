@@ -27,9 +27,14 @@ class Config {
                 'enableTP': true,
                 'selectedDomain': 'global',
                 'gtDomain': Config.getGoogleTranslatorDomain(),
-                'translateURL': `https://${defaultDomain}/?sl=auto&tl=${defaultLanguage}&text=`,
+/*                 'translateURL': `https://${defaultDomain}/?sl=auto&tl=${defaultLanguage}&text=`,
+                'ttsURL': `https://${defaultDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en-US&q=`,
+                'translatePageURL': `https://${defaultDomain}/translate?sl=auto&tl=${defaultLanguage}&u=` */
+
+                'translateURL': `https://${defaultDomain}/#auto/zh-CHT/`,
                 'ttsURL': `https://${defaultDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en-US&q=`,
                 'translatePageURL': `https://${defaultDomain}/translate?sl=auto&tl=${defaultLanguage}&u=`
+
             }, items => {
                 resolve(items);
             });
@@ -75,10 +80,10 @@ class Config {
         let offset = new Date().getTimezoneOffset();
         // Domain for China
         if (offset / 60 === -8) {
-            return "translate.google.cn";
+            return "fanyi.sougou.com";
             // Domain for rest of world
         } else {
-            return "translate.google.com";
+            return "fanyi.sougou.com";
         }
     }
 }
