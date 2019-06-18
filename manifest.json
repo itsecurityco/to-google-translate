@@ -2,9 +2,9 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "3.9",
-    "author": "Juan Escobar",
-    "homepage_url": "https://github.com/itsecurityco/to-google-translate",
+    "version": "3.9.1.1",
+    "author": "Rui",
+    "homepage_url": "https://github.com/r-u-i/to-google-translate",
     "default_locale": "en",
     "icons": {
         "16": "icons/logo-16.png",
@@ -22,7 +22,7 @@
         ]
     },
     "browser_action": {
-        "default_title": "Google Translate",
+        "default_title": "SouGou Translate",
         "default_icon": {
             "16": "icons/logo-16.png",
             "32": "icons/logo-32.png",
@@ -36,13 +36,13 @@
         "storage",
         "webRequest",
         "webRequestBlocking",
-        "https://translate.google.com/*",
-        "https://translate.google.cn/*"
+        "https://fanyi.fanyi.com/*",
+        "https://fanyi.sougou.cn/*"
     ],
     "web_accessible_resources": ["icons/help.png", "supported_languages.json"],
     "applications": {
         "gecko": {
-            "id": "jid1-93WyvpgvxzGATw@jetpack"
+            "id": "sid1-93WyvpgvxzGATw@jetpacg"
         }
     }
 }
