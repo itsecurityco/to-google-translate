@@ -3,7 +3,7 @@
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
     "version": "3.9.1.1",
-    "author": "Rui",
+    "author": "Juan Escobar",
     "homepage_url": "https://github.com/r-u-i/to-google-translate",
     "default_locale": "en",
     "icons": {
