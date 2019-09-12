@@ -37,7 +37,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "js": ["src/config.js", "src/content/modal.js", "src/content/content.js", "src/content/hotkeys.js"],
+            "js": ["src/config.js", "src/content/modal.js", "src/content/modal_iframe.js", "src/content/content.js", "src/content/hotkeys.js"],
             "run_at": "document_idle",
             "all_frames": true
         },
@@ -61,7 +61,7 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html"],
+    "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html", "src/content/modal_iframe.html"],
     "applications": {
         "gecko": {
             "id": "jid1-93WyvpgvxzGATw@jetpack"
