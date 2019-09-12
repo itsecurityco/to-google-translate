@@ -7,7 +7,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', loadOptions);
-let pageLang, userLang, ttsLang, tpPageLang, tpUserLang, enableTT, enableTTS, enableTP, enableHotkeys;
+let pageLang, userLang, ttsLang, tpPageLang, tpUserLang, enableTT, enableTTS, enableTP;
 
 function saveOptions(e) {
     e.preventDefault();
@@ -35,7 +35,6 @@ function saveOptions(e) {
         'enableTT': enableTT.checked,
         'enableTTS': enableTTS.checked,
         'enableTP': enableTP.checked,
-        'enableHotkeys': enableHotkeys.checked,
         'selectedDomain': selectedDomain,
         'openMode': openMode,
         'gtDomain': gtDomain,
@@ -62,7 +61,6 @@ function loadOptions() {
     enableTT = document.querySelector('#enableTT');
     enableTTS = document.querySelector('#enableTTS');
     enableTP = document.querySelector('#enableTP');
-    enableHotkeys = document.querySelector('#enableHotkeys');
 
     new Config(true, config => {
 
@@ -105,7 +103,6 @@ function loadOptions() {
         enableTT.checked = config.enableTT;
         enableTTS.checked = config.enableTTS;
         enableTP.checked = config.enableTP;
-        enableHotkeys.checked = config.enableHotkeys;
         document.querySelector(`input[name=selectedDomain][value="${config.selectedDomain}"]`).checked = true
         document.querySelector(`input[name=openMode][value="${config.openMode}"]`).checked = true
 
