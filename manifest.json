@@ -37,7 +37,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "js": ["src/config.js", "src/content/modal.js", "src/content/modal_iframe.js", "src/content/content.js", "src/content/hotkeys.js"],
+            "js": ["src/config.js", "src/content/modal.js", "src/content/modal_iframe.js", "src/content/content.js"],
             "run_at": "document_idle",
             "all_frames": true
         },
@@ -53,13 +53,34 @@
             "all_frames": true
         }
     ],
+    "commands": {
+        "translate": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+C"
+            },
+            "description": "Translate selected text"
+        },
+        "tts": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+S"
+            },
+            "description": "TTS selected text"
+        },
+        "translatePage": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+P"
+            },
+            "description": "Translate page"
+        }
+    },
     "permissions": [
         "http://*/*",
         "https://*/*",
         "contextMenus",
         "storage",
         "webRequest",
-        "webRequestBlocking"
+        "webRequestBlocking",
+        "tabs"
     ],
     "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html", "src/content/modal_iframe.html"],
     "applications": {

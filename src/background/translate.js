@@ -87,6 +87,28 @@ new Config(true, items => {
     });
 });
 
+browser.commands.onCommand.addListener(function (shortcut) {
+
+    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+        let tab = tabs[0];
+        let config = Config.config;
+
+        if (shortcut === "translate" || shortcut === "tts") {
+            chrome.tabs.executeScript({code: "window.getSelection().toString();"}, function (selection) {
+                let selectedText = selection[0] || "";
+
+                if (shortcut === "translate") {
+                    openTranslate(config.translateURL + encodeURIComponent(selectedText), tab);
+                } else if (shortcut === "tts") {
+                    openTranslate(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
+                }
+            });
+        } else if (shortcut === "translatePage") {
+            openTranslate(config.translatePageURL + encodeURIComponent(tab.url), tab, true);
+        }
+    });
+});
+
 // manage click context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
@@ -109,9 +131,9 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
     }
 });
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if(request.action === 'newTab') {
-        chrome.tabs.create({ url: request.url });
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action === 'newTab') {
+        chrome.tabs.create({url: request.url});
     }
 });
 
