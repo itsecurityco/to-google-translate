@@ -73,9 +73,7 @@ class ModalIframe {
             this.iframeContent.querySelector(".modal-body").style.background = `url(${chrome.runtime.getURL('icons/loading.gif')}) center center no-repeat`;
 
             this.iframeContent.querySelector("iframe").onload = () => {
-                this.iframeContent.querySelector("iframe").contentWindow.postMessage({
-                    action: "hideHeader"
-                }, "*");
+                this.iframeContent.querySelector("iframe").contentWindow.postMessage({action: "hideHeader"}, "*");
             };
 
             this.iframeContent.querySelector("iframe").src = this.url;

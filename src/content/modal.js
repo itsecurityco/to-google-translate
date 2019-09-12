@@ -65,6 +65,10 @@ class Modal {
 
                 this.shadow.querySelector(".modal-body").style.background = `url(${chrome.runtime.getURL('icons/loading.gif')}) center center no-repeat`;
 
+                this.shadow.querySelector("iframe").onload = () => {
+                    this.shadow.querySelector("iframe").contentWindow.postMessage({action: "hideHeader"}, "*");
+                };
+
                 this.shadow.querySelector("iframe").src = this.url;
 
                 this.shadow.querySelector(".close").onclick = () => this.destroy();
