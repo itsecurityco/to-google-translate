@@ -56,19 +56,19 @@
     "commands": {
         "translate": {
             "suggested_key": {
-                "default": "Ctrl+Alt+C"
+                "default": "Ctrl+Shift+V"
             },
             "description": "Translate selected text"
         },
         "tts": {
             "suggested_key": {
-                "default": "Ctrl+Alt+S"
+                "default": "Ctrl+Shift+Q"
             },
             "description": "TTS selected text"
         },
         "translatePage": {
             "suggested_key": {
-                "default": "Ctrl+Alt+P"
+                "default": "Ctrl+Shift+F"
             },
             "description": "Translate page"
         }
