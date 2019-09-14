@@ -31,6 +31,34 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "翻译此页面 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "翻译链接 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
         "message": "谷歌翻译 - 选项页面",
         "description": "Title of the options page itself."
@@ -42,6 +70,18 @@
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "如果包含了多种语言，请在“翻译自”字段选择“自动”。",
         "description": "Notice message for language settings"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "域名",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "全球",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "中国",
+        "description": "Preceding label for china domain"
     },
     "optionsTTCaption": {
         "message": "翻译文本",
@@ -66,6 +106,22 @@
     "optionsEnableTTS": {
         "message": "启用",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "翻译页面",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "从",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "译至",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "启用",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "保存",
