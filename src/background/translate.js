@@ -29,6 +29,26 @@
  */
 
 
+
+chrome.webRequest.onHeadersReceived.addListener(info => {
+        let headers = info.responseHeaders.filter(header => {
+                let name = header.name.toLowerCase();
+                return name !== 'x-frame-options' && name !== 'frame-options';
+            }
+        );
+        return {responseHeaders: headers};
+    },
+    {
+        urls: [
+            '*://translate.google.com/*',
+            '*://translate.google.cn/*'
+        ],
+        types: ['sub_frame']
+    },
+    ['blocking', 'responseHeaders']
+);
+
+
 new Config(true, items => {
 
     let {pageLang, userLang, ttsLang, tpPageLang, tpUserLang, enableTT, enableTTS, enableTP} = items;
@@ -67,6 +87,28 @@ new Config(true, items => {
     });
 });
 
+browser.commands.onCommand.addListener(function (shortcut) {
+
+    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+        let tab = tabs[0];
+        let config = Config.config;
+
+        if (shortcut === "translate" || shortcut === "tts") {
+            chrome.tabs.executeScript({code: "window.getSelection().toString();"}, function (selection) {
+                let selectedText = selection[0] || "";
+
+                if (shortcut === "translate") {
+                    openTranslate(config.translateURL + encodeURIComponent(selectedText), tab);
+                } else if (shortcut === "tts") {
+                    openTranslate(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
+                }
+            });
+        } else if (shortcut === "translatePage") {
+            openTranslate(config.translatePageURL + encodeURIComponent(tab.url), tab, true);
+        }
+    });
+});
+
 // manage click context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
@@ -75,17 +117,23 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     switch (info.menuItemId) {
         case 'translate':
-            tabCreateWithOpenerTabId(config.translateURL + encodeURIComponent(selectedText), tab);
+            openTranslate(config.translateURL + encodeURIComponent(selectedText), tab);
             break;
         case  'tts':
-            tabCreateWithOpenerTabId(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
+            openTranslate(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
             break;
         case 'translatePage':
-            tabCreateWithOpenerTabId(config.translatePageURL + encodeURIComponent(info.pageUrl), tab);
+            openTranslate(config.translatePageURL + encodeURIComponent(info.pageUrl), tab, true);
             break;
         case 'translatePageLink':
-            tabCreateWithOpenerTabId(config.translatePageURL + encodeURIComponent(info.linkUrl), tab);
+            openTranslate(config.translatePageURL + encodeURIComponent(info.linkUrl), tab, true);
             break;
+    }
+});
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action === 'newTab') {
+        chrome.tabs.create({url: request.url});
     }
 });
 
@@ -94,6 +142,17 @@ chrome.runtime.onInstalled.addListener(function (info) {
         chrome.runtime.openOptionsPage();
     }
 });
+
+function openTranslate(url, tab, fullscreen = false) {
+    if (Config.config.openMode === "modal") {
+        chrome.tabs.sendMessage(tab.id, {
+            url: url,
+            fullscreen: fullscreen
+        });
+    } else {
+        tabCreateWithOpenerTabId(url, tab);
+    }
+}
 
 // Create a tab with openerTabId if version of Firefox is above 57
 // https://github.com/itsecurityco/to-google-translate/pull/19

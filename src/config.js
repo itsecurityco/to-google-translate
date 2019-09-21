@@ -10,36 +10,51 @@ class Config {
         }
     }
 
-    static async getOptions() {
+    static async defaultOptions (){
         let defaultLanguage = (await Config.getLanguages()).text.find(o => o.code === Config.getDefaultLanguage()) ? Config.getDefaultLanguage() : "es";
 
         let defaultDomain = Config.getGoogleTranslatorDomain();
 
+        return {
+            'pageLang': 'auto',
+            'userLang': defaultLanguage,
+            'ttsLang': 'en-US',
+            'tpPageLang': 'auto',
+            'tpUserLang': defaultLanguage,
+            'enableTT': true,
+            'enableTTS': true,
+            'enableTP': true,
+            'selectedDomain': 'global',
+            'openMode': 'modal',
+            'gtDomain': Config.getGoogleTranslatorDomain(),
+            'translateURL': `https://${defaultDomain}/?sl=auto&tl=${defaultLanguage}&text=`,
+            'ttsURL': `https://${defaultDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en-US&q=`,
+            'translatePageURL': `https://${defaultDomain}/translate?sl=auto&tl=${defaultLanguage}&u=`
+        }
+    }
+
+    static async getOptions() {
+        let defaultOptions = await Config.defaultOptions();
+
         return new Promise((resolve, reject) => {
-            chrome.storage.local.get({
-                'pageLang': 'auto',
-                'userLang': defaultLanguage,
-                'ttsLang': 'en-US',
-                'tpPageLang': 'auto',
-                'tpUserLang': defaultLanguage,
-                'enableTT': true,
-                'enableTTS': true,
-                'enableTP': true,
-                'selectedDomain': 'global',
-                'gtDomain': Config.getGoogleTranslatorDomain(),
-                'translateURL': `https://${defaultDomain}/?sl=auto&tl=${defaultLanguage}&text=`,
-                'ttsURL': `https://${defaultDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en-US&q=`,
-                'translatePageURL': `https://${defaultDomain}/translate?sl=auto&tl=${defaultLanguage}&u=`
-            }, items => {
+            chrome.storage.local.get(defaultOptions, items => {
                 resolve(items);
             });
         });
     }
 
     static async getOption(option) {
+        let defaultOptions = await Config.defaultOptions();
+
         return new Promise((resolve, reject) => {
             chrome.storage.local.get(option, items => {
-                resolve(items[option]);
+                if(items.hasOwnProperty(option)) {
+                    resolve(items[option]);
+                } else if(defaultOptions.hasOwnProperty(option)){
+                    resolve(defaultOptions[option]);
+                } else {
+                    reject();
+                }
             });
         });
     }

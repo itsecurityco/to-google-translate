@@ -31,15 +31,58 @@
         },
         "default_popup": "src/popup/popup.html"
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": ["src/config.js", "src/content/modal.js", "src/content/modal_iframe.js", "src/content/content.js"],
+            "run_at": "document_idle",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://translate.google.com/*",
+                "*://translate.google.cn/*",
+                "*://translate.googleusercontent.com/*",
+                "*://translate.googleusercontent.cn/*"
+            ],
+            "js": ["src/content/translate_frame.js"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "commands": {
+        "translate": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+V"
+            },
+            "description": "Translate selected text"
+        },
+        "tts": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Q"
+            },
+            "description": "TTS selected text"
+        },
+        "translatePage": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F"
+            },
+            "description": "Translate page"
+        }
+    },
     "permissions": [
+        "http://*/*",
+        "https://*/*",
         "contextMenus",
         "storage",
         "webRequest",
         "webRequestBlocking",
-        "https://translate.google.com/*",
-        "https://translate.google.cn/*"
+        "tabs"
     ],
-    "web_accessible_resources": ["icons/help.png", "supported_languages.json"],
+    "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html", "src/content/modal_iframe.html"],
     "applications": {
         "gecko": {
             "id": "jid1-93WyvpgvxzGATw@jetpack"
