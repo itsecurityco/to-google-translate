@@ -71,6 +71,22 @@
         "message": "Configure el campo Origen en 'auto' para usar cuando utilice varios idiomas.",
         "description": "Notice message for language settings"
     },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Atajos con el Teclado",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Traducir texto seleccionado",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS texto seleccionado",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Traducir página",
+        "description": "Notice message for shortcut translate page"
+    },
     "optionsSelectedDomainCaption": {
         "message": "Dominio",
         "description": "Caption domain"

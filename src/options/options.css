@@ -13,6 +13,20 @@ body {
     padding-left: 22px;
 }
 
+.icon {
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+}
+
+.icon-help {
+    background-image: url('../../icons/help.png');
+}
+
+.icon-keyboard {
+    background-image: url('../../icons/keyboard.png');
+}
+
 table {
     width: 100%;
     border: 1px solid #d7d7db !important;
