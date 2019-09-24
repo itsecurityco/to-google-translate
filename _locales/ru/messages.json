@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Выделите текст на странице и отправьте его в Google Переводчик или прослушайте произношение.",
+        "message": "Переводите страницы или части текста через Google Переводчик и слушайте произношение.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -31,6 +31,34 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "Перевести страницу ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Перевести ссылку ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
         "message": "To Google Translate - Настройки",
         "description": "Title of the options page itself."
@@ -42,6 +70,46 @@
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Установите язык исходного текста в 'auto' для автоматического определения языка.",
         "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Горячие клавиши",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Перевести выделенный текст",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "Озвучить выделенный текст",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Перевести страницу",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Домен",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Глобальный",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "Китай",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Открывать переводчик как",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Всплывающее окно",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Новая вкладка",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Перевод текста",
@@ -66,6 +134,22 @@
     "optionsEnableTTS": {
         "message": "Включить",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Перевод страницы",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Язык страницы",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Язык перевода",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Включить",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "Сохранить",
