@@ -107,6 +107,10 @@
         "message": "Modal",
         "description": "Preceding label for Modal"
     },
+    "optionsOpenModeWidget": {
+        "message": "Widget",
+        "description": "Preceding label for Widget"
+    },
     "optionsOpenModeNewTab": {
         "message": "New Tab",
         "description": "Preceding label for New Tab"
