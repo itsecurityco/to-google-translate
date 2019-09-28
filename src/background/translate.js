@@ -153,9 +153,12 @@ chrome.runtime.onInstalled.addListener(function (info) {
 
 function openTranslate(url, tab, fullscreen = false) {
     if (Config.config.openMode === "modal" || Config.config.openMode === "widget") {
-        chrome.tabs.sendMessage(tab.id, {
-            url: url,
-            fullscreen: fullscreen
+        chrome.tabs.executeScript(null, {file: "/src/config.js"}, function () {
+            chrome.tabs.executeScript(null, {file: "/src/content/modal.js"}, function () {
+                chrome.tabs.executeScript(null, {file: "/src/content/content.js"}, function () {
+                    chrome.tabs.executeScript(null, {code: "show_modal('" + url + "', " + !!fullscreen + ");"});
+                });
+            });
         });
     } else {
         tabCreateWithOpenerTabId(url, tab);

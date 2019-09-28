@@ -1,9 +1,3 @@
-chrome.runtime.onMessage.addListener(function (message, sender, callback) {
-    if (message.url) {
-        show_modal(message.url, message.fullscreen);
-    }
-});
-
 function show_modal(url, fullscreen = false) {
     let agentMatch = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
     let firefoxVersion = agentMatch ? parseInt(agentMatch[1]) : 0;
@@ -16,3 +10,4 @@ function show_modal(url, fullscreen = false) {
         tgt_model.show();
     });
 }
+

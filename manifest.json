@@ -34,14 +34,6 @@
     "content_scripts": [
         {
             "matches": [
-                "http://*/*",
-                "https://*/*"
-            ],
-            "js": ["src/config.js", "src/content/modal.js", "src/content/modal_iframe.js", "src/content/content.js"],
-            "run_at": "document_idle"
-        },
-        {
-            "matches": [
                 "*://translate.google.com/*",
                 "*://translate.google.cn/*",
                 "*://translate.googleusercontent.com/*",
@@ -73,8 +65,9 @@
         }
     },
     "permissions": [
-        "http://*/*",
-        "https://*/*",
+        "*://translate.google.com/*",
+        "*://translate.google.cn/*",
+        "activeTab",
         "contextMenus",
         "storage",
         "webRequest",
