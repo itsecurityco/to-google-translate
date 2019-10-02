@@ -104,7 +104,11 @@ browser.commands.onCommand.addListener(function (shortcut) {
                 }
             });
         } else if (shortcut === "translatePage") {
-            openTranslate(config.translatePageURL + encodeURIComponent(tab.url), tab, true);
+            if (config.openMode === "widget") {
+                chrome.tabs.executeScript(null, {file: "/src/content/inject_widget.js"});
+            } else {
+                openTranslate(config.translatePageURL + encodeURIComponent(tab.url), tab, true);
+            }
         }
     });
 });
@@ -123,7 +127,11 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
             openTranslate(config.ttsURL + encodeURIComponent(selectedText) + '&textlen=' + selectedText.length, tab);
             break;
         case 'translatePage':
-            openTranslate(config.translatePageURL + encodeURIComponent(info.pageUrl), tab, true);
+            if (config.openMode === "widget") {
+                chrome.tabs.executeScript(null, {file: "/src/content/inject_widget.js"});
+            } else {
+                openTranslate(config.translatePageURL + encodeURIComponent(info.pageUrl), tab, true);
+            }
             break;
         case 'translatePageLink':
             openTranslate(config.translatePageURL + encodeURIComponent(info.linkUrl), tab, true);
@@ -144,10 +152,13 @@ chrome.runtime.onInstalled.addListener(function (info) {
 });
 
 function openTranslate(url, tab, fullscreen = false) {
-    if (Config.config.openMode === "modal") {
-        chrome.tabs.sendMessage(tab.id, {
-            url: url,
-            fullscreen: fullscreen
+    if (Config.config.openMode === "modal" || Config.config.openMode === "widget") {
+        chrome.tabs.executeScript(null, {file: "/src/config.js"}, function () {
+            chrome.tabs.executeScript(null, {file: "/src/content/modal.js"}, function () {
+                chrome.tabs.executeScript(null, {file: "/src/content/content.js"}, function () {
+                    chrome.tabs.executeScript(null, {code: "show_modal('" + url + "', " + !!fullscreen + ");"});
+                });
+            });
         });
     } else {
         tabCreateWithOpenerTabId(url, tab);
