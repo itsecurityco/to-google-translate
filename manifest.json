@@ -56,7 +56,7 @@
     "commands": {
         "translate": {
             "suggested_key": {
-                "default": "Ctrl+Shift+V"
+                "default": "Ctrl+Shift+B"
             },
             "description": "Translate selected text"
         },
