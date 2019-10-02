@@ -31,7 +31,34 @@
             }
         }
     },
-    "optionsPageTitle": {
+    "contextMenuTitleTranslatePage": {
+        "message": "Traduci questa pagina ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Traduci link ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },    "optionsPageTitle": {
         "message": "To Google Translate - Opzioni",
         "description": "Title of the options page itself."
     },
@@ -42,6 +69,46 @@
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Imposta il campo Da su 'auto' per quando sono presenti più lingue.",
         "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Collegamenti rapidi da Tastiera",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Traduci testo selezionato",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS testo selezionato",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Traduci pagina",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Dominio",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Globale",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Apri in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modale",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Nuovo Tab",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Traduci il testo",
@@ -66,6 +133,22 @@
     "optionsEnableTTS": {
         "message": "Attiva",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+     "optionsTPCaption": {
+        "message": "Traduci Pagina",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Da",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "A",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Enable",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "Salva",
