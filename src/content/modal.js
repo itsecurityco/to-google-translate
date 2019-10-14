@@ -80,6 +80,8 @@ class Modal {
                     }
                 };
 
+                l10n.updateSubtree(this.shadow.querySelector('.modal'));
+
                 return true;
             });
     }

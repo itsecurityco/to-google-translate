@@ -88,6 +88,8 @@ class ModalIframe {
                     this.destroy();
                 }
             };
+
+            l10n.updateSubtree(this.iframeContent.querySelector(".modal"));
         };
 
         this.iframe.src = chrome.runtime.getURL('src/content/modal_iframe.html');
