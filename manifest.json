@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "author": "Juan Escobar",
     "homepage_url": "https://github.com/itsecurityco/to-google-translate",
     "default_locale": "en",
@@ -88,7 +88,14 @@
         "webRequestBlocking",
         "tabs"
     ],
-    "web_accessible_resources": ["icons/help.png", "icons/loading.gif", "supported_languages.json", "src/content/modal.html", "src/content/modal_iframe.html"],
+    "web_accessible_resources": [
+        "icons/help.png",
+        "icons/loading.gif",
+        "supported_languages.json",
+        "src/content/modal.html",
+        "src/content/modal.css",
+        "src/content/modal_iframe.html"
+    ],
     "applications": {
         "gecko": {
             "id": "jid1-93WyvpgvxzGATw@jetpack"

@@ -1,4 +1,5 @@
-<style>
+<!-- this file is needed for support Shadow Dom in firefoxVersion < 63 -->
+<style type="text/css">
     .modal {
         position: fixed;
         z-index: 999999;
@@ -93,11 +94,12 @@
         display: inline;
     }
 </style>
+
 <div class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
-            <span class="new-tab">&#x1F5D7;</span>
+            <span class="new-tab">+</span>
             <span class="title">__MSG_extensionName__</span>
             <select class="select-lang" name="contentPageLang" id="contentPageLang"></select>
             <select class="select-lang" name="contentUserLang" id="contentUserLang"></select>
@@ -108,4 +110,3 @@
         </div>
     </div>
 </div>
-<script src="../l10n.js"></script>
