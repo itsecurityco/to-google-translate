@@ -24,7 +24,7 @@ class Modal {
             .then(resp => resp.text())
             .then(html => {
 
-                this.shadow.innerHTML = html;
+                this.shadow.innerHTML = l10n.updateString(html);
 
                 if (this.fullscreen) {
                     this.shadow.querySelector(".modal").classList.add("modal-fullscreen");

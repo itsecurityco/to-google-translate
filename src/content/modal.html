@@ -48,6 +48,16 @@
         padding: 0 10px;
     }
 
+    .icon {
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left: 22px;
+    }
+
+    .icon-help {
+        background-image: url('../../icons/help.png');
+    }
+
     .new-tab:hover,
     .new-tab:focus,
     .close:hover,
@@ -99,7 +109,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
-            <span class="new-tab">&#x1F5D7;</span>
+            <span class="new-tab">+</span>
             <span class="title">__MSG_extensionName__</span>
             <select class="select-lang" name="contentPageLang" id="contentPageLang"></select>
             <select class="select-lang" name="contentUserLang" id="contentUserLang"></select>
@@ -110,4 +120,3 @@
         </div>
     </div>
 </div>
-<script src="../l10n.js"></script>
