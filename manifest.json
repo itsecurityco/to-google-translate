@@ -37,7 +37,13 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "js": ["src/config.js", "src/content/modal.js", "src/content/modal_iframe.js", "src/content/content.js"],
+            "js": [
+                "src/config.js",
+                "src/content/modal.js",
+                "src/content/modal_iframe.js",
+                "src/content/content.js",
+                "src/l10n.js"
+            ],
             "run_at": "document_idle",
             "all_frames": true
         },
