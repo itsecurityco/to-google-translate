@@ -71,6 +71,22 @@
         "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
         "description": "Notice message for language settings"
     },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Sneltoetsen",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Geselecteerde tekst vertalen",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "Tekst naar spraak voor geselecteerde tekst",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Pagina vertalen",
+        "description": "Notice message for shortcut translate page"
+    },
     "optionsSelectedDomainCaption": {
         "message": "Domein",
         "description": "Caption domain"
@@ -82,6 +98,18 @@
     "optionsSelectedDomainChina": {
         "message": "China",
         "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Openen in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modaal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Nieuw tabblad",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Tekst vertalen",
