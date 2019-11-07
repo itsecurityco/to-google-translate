@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "author": "Juan Escobar",
     "homepage_url": "https://github.com/itsecurityco/to-google-translate",
     "default_locale": "en",
@@ -62,19 +62,19 @@
     "commands": {
         "translate": {
             "suggested_key": {
-                "default": "Ctrl+Shift+B"
+                "default": "Ctrl+Shift+1"
             },
             "description": "Translate selected text"
         },
         "tts": {
             "suggested_key": {
-                "default": "Ctrl+Shift+Q"
+                "default": "Ctrl+Shift+2"
             },
             "description": "TTS selected text"
         },
         "translatePage": {
             "suggested_key": {
-                "default": "Ctrl+Shift+F"
+                "default": "Ctrl+Shift+3"
             },
             "description": "Translate page"
         }
