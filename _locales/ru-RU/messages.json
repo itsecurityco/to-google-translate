@@ -1,0 +1,162 @@
+{
+    "extensionName": {
+        "message": "To Google Translate",
+        "description": "Name of the extension"
+    },
+    "extensionDescription": {
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation.",
+        "description": "Description of the extension."
+    },
+    "contextMenuTitleTranslate": {
+        "message": "Translate ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTextToSpeech": {
+        "message": "Listen ($TTS_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "tts_lang": {
+                "content": "$1",
+                "example": "en"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePage": {
+        "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "optionsPageTitle": {
+        "message": "To Google Translate - Options page",
+        "description": "Title of the options page itself."
+    },
+    "optionsTitle": {
+        "message": "Settings",
+        "description": "Visible title in the options page."
+    },
+    "optionsNoteForEncounteringMultipleLanguage": {
+        "message": "Set the From field to 'auto' to use when encountering multiple languages.",
+        "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Keyboard Shortcuts",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Translate selected text",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS selected text",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Translate page",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Domain",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Global",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Open in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "New Tab",
+        "description": "Preceding label for New Tab"
+    },
+    "optionsTTCaption": {
+        "message": "Translate Text",
+        "description": "Caption for text translation"
+    },
+    "optionsPageLang": {
+        "message": "From",
+        "description": "Preceding label for the page language"
+    },
+    "optionsUserLang": {
+        "message": "To",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTT": {
+        "message": "Enable",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
+    "optionsTTSCaption": {
+        "message": "Text To Speech",
+        "description": "Caption for text to speech"
+    },
+    "optionsEnableTTS": {
+        "message": "Enable",
+        "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Translate Page",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "From",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "To",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Enable",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
+    "optionsSubmit": {
+        "message": "Save",
+        "description": "Label for the button to save settings"
+    },
+    "optionsMessageSaved": {
+        "message": "Settings saved",
+        "description": "Message to be shown after settings are successfully saved"
+    }
+}
