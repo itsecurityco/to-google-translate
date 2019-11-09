@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "ウェブページ内のテキストを選択して Google 翻訳へ送ったり、発音を聞いたりできます。",
+        "message": "Markeer tekst op een webpagina en stuur deze naar Google Translate of luister naar de uitspraak.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "翻訳 ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Vertalen ($PAGE_LANG$\/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -17,12 +17,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "es"
+                "example": "nl"
             }
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "発音を聞く ($TTS_LANG$)",
+        "message": "Luisteren ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -31,48 +31,132 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "Deze pagina vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "nl"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Koppeling vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "nl"
+            }
+        }
+    },
     "optionsPageTitle": {
-        "message": "To Google Translate - 設定ページ",
+        "message": "To Google Translate - Optiespagina",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "設定",
+        "message": "Instellingen",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "複数の言語から翻訳したい場合は「翻訳元」欄を「auto」に設定してください。",
+        "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
         "description": "Notice message for language settings"
     },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Sneltoetsen",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Geselecteerde tekst vertalen",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "Tekst naar spraak voor geselecteerde tekst",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Pagina vertalen",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Domein",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Globaal",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Openen in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modaal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Nieuw tabblad",
+        "description": "Preceding label for New Tab"
+    },
     "optionsTTCaption": {
-        "message": "テキスト翻訳",
+        "message": "Tekst vertalen",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "翻訳元",
+        "message": "Van",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "翻訳先",
+        "message": "Naar",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "有効にする",
+        "message": "Inschakelen",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "テキスト読み上げ",
+        "message": "Tekst naar spraak",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "有効にする",
+        "message": "Inschakelen",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
+    "optionsTPCaption": {
+        "message": "Pagina vertalen",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Van",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Naar",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Inschakelen",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
     "optionsSubmit": {
-        "message": "保存",
+        "message": "Opslaan",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "設定が保存されました",
+        "message": "Instellingen opgeslagen",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
