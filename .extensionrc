@@ -1,0 +1,10 @@
+module.exports = {
+
+    'artifactsDir': 'artifacts',
+    'ignoreFiles': ['crowdin.yaml'],
+
+    'build': {
+        'overwriteDest': true
+    }
+};
+
