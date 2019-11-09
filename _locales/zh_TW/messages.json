@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "在網頁上反白文字以傳送至 Google 翻譯或朗讀。",
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -68,8 +68,24 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "設定為 Auto 以自動辨識原文的語言。",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages",
         "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Keyboard Shortcuts",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Translate selected text",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS selected text",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Translate page",
+        "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
         "message": "網域",
@@ -82,6 +98,18 @@
     "optionsSelectedDomainChina": {
         "message": "中國",
         "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Open in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "New Tab",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "翻譯文字",
