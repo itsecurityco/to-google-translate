@@ -100,7 +100,7 @@
         "description": "Preceding label for china domain"
     },
     "optionsOpenModeCaption": {
-        "message": "Open in",
+        "message": "Abrir en",
         "description": "Caption open mode"
     },
     "optionsOpenModeModal": {
@@ -108,7 +108,7 @@
         "description": "Preceding label for Modal"
     },
     "optionsOpenModeNewTab": {
-        "message": "New Tab",
+        "message": "Nueva Pestaña",
         "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
