@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Seleccione texto en una página web y envíelo al traductor de Google o escuche su pronunciación.",
+        "message": "Seleccione texto en una página web y envíelo al traductor de Google o escuche su pronunciación",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Traducir ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Traducir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -31,7 +31,7 @@
             }
         }
     },
-        "contextMenuTitleTranslatePage": {
+    "contextMenuTitleTranslatePage": {
         "message": "Traducir esta página ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
@@ -68,7 +68,7 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Configure el campo Origen en 'auto' para usar cuando utilice varios idiomas.",
+        "message": "Configure el campo Origen en 'auto' para usar cuando utilice varios idiomas",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
@@ -98,6 +98,18 @@
     "optionsSelectedDomainChina": {
         "message": "China",
         "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Abrir en",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Nueva Pestaña",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Traducir Texto",
