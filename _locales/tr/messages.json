@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "Al traductor de Google",
+        "message": "Google Çeviri'ye",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Seleccione texto en una página web y envíelo al traductor de Google o escuche su pronunciación.",
+        "message": "Bir sayfadaki metni seçin ve Google Çeviri'ye gönderin veya telaffuzunu dinleyin.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Traducir ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Seçimi çevir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "Escuchar ($TTS_LANG$)",
+        "message": "Seçimi dinle ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "Traducir esta página ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Sayfayı çevir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -46,7 +46,7 @@
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "Traducir enlace ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Bağlantıyı çevir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -60,91 +60,103 @@
         }
     },
     "optionsPageTitle": {
-        "message": "Al Traductor de Google - Página de opciones",
+        "message": "Google Çeviri'ye - Ayarlar",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Ajustes",
+        "message": "Ayarlar",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Configure el campo Origen en 'auto' para usar cuando utilice varios idiomas.",
+        "message": "Farklı dillerdeki sayfaları çevirebilmek için kaynak alanını 'auto' seçin.",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
-        "message": "Atajos con el Teclado",
+        "message": "Keyboard Shortcuts",
         "description": "Notice message for shortcuts"
     },
     "optionsNoteForKeyboardShortcutTranslate": {
-        "message": "Traducir texto seleccionado",
+        "message": "Translate selected text",
         "description": "Notice message for shortcut translate"
     },
     "optionsNoteForKeyboardShortcutTTS": {
-        "message": "TTS texto seleccionado",
+        "message": "TTS selected text",
         "description": "Notice message for shortcut TTS"
     },
     "optionsNoteForKeyboardShortcutTranslatePage": {
-        "message": "Traducir página",
+        "message": "Translate page",
         "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
-        "message": "Dominio",
+        "message": "Alan adı",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "Global",
+        "message": "Küresel",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "China",
+        "message": "Çin",
         "description": "Preceding label for china domain"
     },
+    "optionsOpenModeCaption": {
+        "message": "Open in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "New Tab",
+        "description": "Preceding label for New Tab"
+    },
     "optionsTTCaption": {
-        "message": "Traducir Texto",
+        "message": "Metin çevirisi",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "Origen",
+        "message": "Kaynak",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Destino",
+        "message": "Hedef",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Habilitar",
+        "message": "Etkin",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Texto a Voz",
+        "message": "Metin seslendirme",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Habilitar",
+        "message": "Etkin",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "Traducir Página",
+        "message": "Sayfa çevirisi",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "Origen",
+        "message": "Kaynak",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "Destino",
+        "message": "Hedef",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "Habilitar",
+        "message": "Etkin",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
-        "message": "Guardar",
+        "message": "Kaydet",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Ajustes guardados",
+        "message": "Ayarlar kaydedildi",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
