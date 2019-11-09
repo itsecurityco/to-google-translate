@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "To Google Translate",
+        "message": "To Google Translate 谷歌快译",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Markeer tekst op een webpagina en stuur deze naar Google Translate of luister naar de uitspraak.",
+        "message": "选中文本，用谷歌翻译或收听发音。",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Vertalen ($PAGE_LANG$/$USER_LANG$)",
+        "message": "翻译 ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "Luisteren ($TTS_LANG$)",
+        "message": "发音 ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "Deze pagina vertalen ($PAGE_LANG$/$USER_LANG$)",
+        "message": "翻译此页面 ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -46,7 +46,7 @@
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "Koppeling vertalen ($PAGE_LANG$/$USER_LANG$)",
+        "message": "翻译链接 ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -60,75 +60,75 @@
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate - Optiespagina",
+        "message": "谷歌翻译 - 选项页面",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Instellingen",
+        "message": "设置",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
+        "message": "如果包含了多种语言，请在“翻译自”字段选择“自动”。",
         "description": "Notice message for language settings"
     },
     "optionsSelectedDomainCaption": {
-        "message": "Domein",
+        "message": "域名",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "Globaal",
+        "message": "全球",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "China",
+        "message": "中国",
         "description": "Preceding label for china domain"
     },
     "optionsTTCaption": {
-        "message": "Tekst vertalen",
+        "message": "翻译文本",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "Van",
+        "message": "从",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Naar",
+        "message": "译至",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Inschakelen",
+        "message": "启用",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Tekst naar spraak",
+        "message": "文本到语音",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Inschakelen",
+        "message": "启用",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "Pagina vertalen",
+        "message": "翻译页面",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "Van",
+        "message": "从",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "Naar",
+        "message": "译至",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "Inschakelen",
+        "message": "启用",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
-        "message": "Opslaan",
+        "message": "保存",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Instellingen opgeslagen",
+        "message": "设置已保存",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
