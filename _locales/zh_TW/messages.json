@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "在網頁上反白文字以傳送至 Google 翻譯或朗讀。",
+        "message": "Evidenzia il testo su una pagina web e inviala a Google Translate o ascoltane la pronuncia.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "翻譯 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Traduci ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "聆聽 ($TTS_LANG$)",
+        "message": "Ascolta ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "翻譯此頁面 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Traduci questa pagina ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -46,7 +46,7 @@
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "翻譯連結 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Traduci link ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -60,75 +60,103 @@
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate - 選項頁面",
+        "message": "To Google Translate - Opzioni",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "設定",
+        "message": "Impostazioni",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "設定為 Auto 以自動辨識原文的語言。",
+        "message": "Imposta il campo Da su 'auto' per quando sono presenti più lingue.",
         "description": "Notice message for language settings"
     },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Collegamenti rapidi da Tastiera",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Traduci testo selezionato",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS testo selezionato",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Traduci pagina",
+        "description": "Notice message for shortcut translate page"
+    },
     "optionsSelectedDomainCaption": {
-        "message": "網域",
+        "message": "Dominio",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "全球",
+        "message": "Globale",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "中國",
+        "message": "China",
         "description": "Preceding label for china domain"
     },
+    "optionsOpenModeCaption": {
+        "message": "Apri in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modale",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Nuovo Tab",
+        "description": "Preceding label for New Tab"
+    },
     "optionsTTCaption": {
-        "message": "翻譯文字",
+        "message": "Traduci il testo",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "從",
+        "message": "Da",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "至",
+        "message": "A",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "啟用",
+        "message": "Attiva",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "文字到語音",
+        "message": "Sintesi vocale",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "啟用",
+        "message": "Attiva",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "翻譯頁面",
+        "message": "Traduci Pagina",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "從",
+        "message": "Da",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "至",
+        "message": "A",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "啟用",
+        "message": "Enable",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
-        "message": "儲存",
+        "message": "Salva",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "設定已儲存",
+        "message": "Preferenze salvate",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
