@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "翻譯此頁面 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -46,7 +46,7 @@
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "翻譯連結 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -71,17 +71,45 @@
         "message": "Defina o campo 'De' como 'auto' para usar quando encontrar vários idiomas.",
         "description": "Notice message for language settings"
     },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Keyboard Shortcuts",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Translate selected text",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS selected text",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Translate page",
+        "description": "Notice message for shortcut translate page"
+    },
     "optionsSelectedDomainCaption": {
-        "message": "網域",
+        "message": "Domain",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "全球",
+        "message": "Global",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "中國",
+        "message": "China",
         "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Open in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "New Tab",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Traduzir texto",
@@ -108,19 +136,19 @@
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "翻譯頁面",
+        "message": "Translate Page",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "從",
+        "message": "From",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "至",
+        "message": "To",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "啟用",
+        "message": "Enable",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
