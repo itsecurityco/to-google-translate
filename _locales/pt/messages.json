@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "To Google Translate 谷歌快译",
+        "message": "Google Çeviri'ye",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "选中文本，用谷歌翻译或收听发音。",
+        "message": "Bir sayfadaki metni seçin ve Google Çeviri'ye gönderin veya telaffuzunu dinleyin.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "翻译 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Seçimi çevir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -17,12 +17,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "es"
+                "example": "tr"
             }
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "发音 ($TTS_LANG$)",
+        "message": "Seçimi dinle ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "翻译此页面 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Sayfayı çevir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -41,12 +41,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "es"
+                "example": "tr"
             }
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "翻译链接 ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Bağlantıyı çevir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -55,80 +55,80 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "es"
+                "example": "tr"
             }
         }
     },
     "optionsPageTitle": {
-        "message": "谷歌翻译 - 选项页面",
+        "message": "Google Çeviri'ye - Ayarlar",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "设置",
+        "message": "Ayarlar",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "如果包含了多种语言，请在“翻译自”字段选择“自动”。",
+        "message": "Farklı dillerdeki sayfaları çevirebilmek için kaynak alanını 'auto' seçin.",
         "description": "Notice message for language settings"
     },
     "optionsSelectedDomainCaption": {
-        "message": "域名",
+        "message": "Alan adı",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "全球",
+        "message": "Küresel",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "中国",
+        "message": "Çin",
         "description": "Preceding label for china domain"
     },
     "optionsTTCaption": {
-        "message": "翻译文本",
+        "message": "Metin çevirisi",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "从",
+        "message": "Kaynak",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "译至",
+        "message": "Hedef",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "启用",
+        "message": "Etkin",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "文本到语音",
+        "message": "Metin seslendirme",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "启用",
+        "message": "Etkin",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "翻译页面",
+        "message": "Sayfa çevirisi",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "从",
+        "message": "Kaynak",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "译至",
+        "message": "Hedef",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "启用",
+        "message": "Etkin",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
-        "message": "保存",
+        "message": "Kaydet",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "设置已保存",
+        "message": "Ayarlar kaydedildi",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
