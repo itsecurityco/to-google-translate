@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "Google Çeviri'ye",
+        "message": "To Google Translate",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Bir sayfadaki metni seçin ve Google Çeviri'ye gönderin veya telaffuzunu dinleyin.",
+        "message": "Выделите текст на странице и отправьте его в Google Переводчик или прослушайте произношение.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Seçimi çevir ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Перевести ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -17,12 +17,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "tr"
+                "example": "es"
             }
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "Seçimi dinle ($TTS_LANG$)",
+        "message": "Прослушать ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -31,104 +31,48 @@
             }
         }
     },
-    "contextMenuTitleTranslatePage": {
-        "message": "Sayfayı çevir ($PAGE_LANG$/$USER_LANG$)",
-        "description": "The contextMenus title.",
-        "placeholders": {
-            "page_lang": {
-                "content": "$1",
-                "example": "en"
-            },
-            "user_lang": {
-                "content": "$2",
-                "example": "tr"
-            }
-        }
-    },
-    "contextMenuTitleTranslatePageLink": {
-        "message": "Bağlantıyı çevir ($PAGE_LANG$/$USER_LANG$)",
-        "description": "The contextMenus title.",
-        "placeholders": {
-            "page_lang": {
-                "content": "$1",
-                "example": "en"
-            },
-            "user_lang": {
-                "content": "$2",
-                "example": "tr"
-            }
-        }
-    },
     "optionsPageTitle": {
-        "message": "Google Çeviri'ye - Ayarlar",
+        "message": "To Google Translate - Настройки",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Ayarlar",
+        "message": "Настройки",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Farklı dillerdeki sayfaları çevirebilmek için kaynak alanını 'auto' seçin.",
+        "message": "Установите язык исходного текста в 'auto' для автоматического определения языка.",
         "description": "Notice message for language settings"
     },
-    "optionsSelectedDomainCaption": {
-        "message": "Alan adı",
-        "description": "Caption domain"
-    },
-    "optionsSelectedDomainGlobal": {
-        "message": "Küresel",
-        "description": "Preceding label for global domain"
-    },
-    "optionsSelectedDomainChina": {
-        "message": "Çin",
-        "description": "Preceding label for china domain"
-    },
     "optionsTTCaption": {
-        "message": "Metin çevirisi",
+        "message": "Перевод текста",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "Kaynak",
+        "message": "Язык текста",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Hedef",
+        "message": "Язык перевода",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Etkin",
+        "message": "Включить",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Metin seslendirme",
+        "message": "Произношение текста",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Etkin",
+        "message": "Включить",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
-    "optionsTPCaption": {
-        "message": "Sayfa çevirisi",
-        "description": "Caption for text translation"
-    },
-    "optionsTPPageLang": {
-        "message": "Kaynak",
-        "description": "Preceding label for the page language"
-    },
-    "optionsTPUserLang": {
-        "message": "Hedef",
-        "description": "Preceding label for the translated language"
-    },
-    "optionsEnableTP": {
-        "message": "Etkin",
-        "description": "Label for the checkbox to show \"Translate\" menu item"
-    },
     "optionsSubmit": {
-        "message": "Kaydet",
+        "message": "Сохранить",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Ayarlar kaydedildi",
+        "message": "Настройки сохранены",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
