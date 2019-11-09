@@ -8,7 +8,7 @@
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "翻訳 ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "翻訳 ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -31,6 +31,34 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "翻譯此頁面 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "翻譯連結 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
         "message": "To Google Translate - 設定ページ",
         "description": "Title of the options page itself."
@@ -42,6 +70,18 @@
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "複数の言語から翻訳したい場合は「翻訳元」欄を「auto」に設定してください。",
         "description": "Notice message for language settings"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "網域",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "全球",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "中國",
+        "description": "Preceding label for china domain"
     },
     "optionsTTCaption": {
         "message": "テキスト翻訳",
@@ -66,6 +106,22 @@
     "optionsEnableTTS": {
         "message": "有効にする",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "翻譯頁面",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "從",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "至",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "啟用",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "保存",
