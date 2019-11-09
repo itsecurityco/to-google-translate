@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation.",
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -68,7 +68,7 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages.",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
