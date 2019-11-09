@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Markeer tekst op een webpagina en stuur deze naar Google Translate of luister naar de uitspraak.",
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -68,7 +68,7 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
