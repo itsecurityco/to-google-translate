@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Evidenzia il testo su una pagina web e inviala a Google Translate o ascoltane la pronuncia.",
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Traduci ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Traduci ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -58,7 +58,8 @@
                 "example": "es"
             }
         }
-    },    "optionsPageTitle": {
+    },
+    "optionsPageTitle": {
         "message": "To Google Translate - Opzioni",
         "description": "Title of the options page itself."
     },
@@ -67,7 +68,7 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Imposta il campo Da su 'auto' per quando sono presenti più lingue.",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
@@ -134,7 +135,7 @@
         "message": "Attiva",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
-     "optionsTPCaption": {
+    "optionsTPCaption": {
         "message": "Traduci Pagina",
         "description": "Caption for text translation"
     },
