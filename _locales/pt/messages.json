@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Selecione texto em uma página e envie para o Google Tradutor ou ouça sua pronúncia.",
+        "message": "Selecione o texto em uma página da Web e envie-a para o Google Tradutor ou ouça a sua pronúncia.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -60,15 +60,15 @@
         }
     },
     "optionsPageTitle": {
-        "message": "Para o Google Tradutor - Pagina de Opções",
+        "message": "To Google Translate - Options page",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Configurações",
+        "message": "Settings",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Defina o campo 'De' como 'auto' para usar quando encontrar vários idiomas.",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages.",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
@@ -112,27 +112,27 @@
         "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
-        "message": "Traduzir texto",
+        "message": "Translate Text",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "De",
+        "message": "From",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Para",
+        "message": "To",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Ativar",
+        "message": "Enable",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Texto para fala",
+        "message": "Text To Speech",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Ativar",
+        "message": "Enable",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
@@ -152,11 +152,11 @@
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
-        "message": "Salvar",
+        "message": "Save",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Configurações salvas",
+        "message": "Settings saved",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
