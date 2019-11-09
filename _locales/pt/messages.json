@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "Para o Google Tradutor",
-        "description": "Nome da extensão"
+        "message": "To Google Translate",
+        "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Selecione o texto em uma página da Web e envie-a para o Google Tradutor ou ouça a sua pronúncia.",
-        "description": "Descrição da extensão."
+        "message": "Markieren Sie den Text auf einer Webseite und senden Sie ihn an den Google Übersetzer oder hören Sie sich die Aussprache an.",
+        "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Traduzir ($PAGE_LANG$/$USER_LANG$)",
+        "message": "($PAGE_LANG$\/$USER_LANG$) übersetzen",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -17,12 +17,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "pt"
+                "example": "es"
             }
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "Ouvir pronúncia ($TTS_LANG$)",
+        "message": "($TTS_LANG$) anhören",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,47 +32,47 @@
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate - Options page",
+        "message": "To Google Translate-Einstellungen",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Settings",
+        "message": "Einstellungen",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages.",
+        "message": "Von-Feld auf \"auto\" setzen, wenn mehrere Sprachen verwendet werden.",
         "description": "Notice message for language settings"
     },
     "optionsTTCaption": {
-        "message": "Translate Text",
+        "message": "Text übersetzen",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "From",
+        "message": "Von",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "To",
+        "message": "Nach",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Enable",
+        "message": "Aktivieren",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Text To Speech",
+        "message": "Sprachausgabe",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Enable",
+        "message": "Aktivieren",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsSubmit": {
-        "message": "Save",
+        "message": "Speichern",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Settings saved",
+        "message": "Einstellungen gespeichert",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
