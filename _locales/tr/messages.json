@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation",
+        "message": "Bir sayfadaki metni seçin ve Google Çeviri'ye gönderin veya telaffuzunu dinleyin",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
