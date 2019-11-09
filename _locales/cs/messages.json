@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Markieren Sie den Text auf einer Webseite und senden Sie ihn an den Google Übersetzer oder hören Sie sich die Aussprache an.",
+        "message": "Zvýrazněte text na webové stránce a nechte si jej přeložit nebo přečíst pomocí Google Překladače.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "($PAGE_LANG$\/$USER_LANG$) übersetzen",
+        "message": "Přeložit ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "($TTS_LANG$) anhören",
+        "message": "Poslechnout ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -32,47 +32,47 @@
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate-Einstellungen",
+        "message": "To Google Translate - Nastavení",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Einstellungen",
+        "message": "Nastavení",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Von-Feld auf \"auto\" setzen, wenn mehrere Sprachen verwendet werden.",
+        "message": "Nastavte pole 'Z' na \"auto\", pokud se setkáváte s více jazyky.",
         "description": "Notice message for language settings"
     },
     "optionsTTCaption": {
-        "message": "Text übersetzen",
+        "message": "Přeložit text",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "Von",
+        "message": "Z",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Nach",
+        "message": "Do",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Aktivieren",
+        "message": "Povolit",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Sprachausgabe",
+        "message": "Text na řeč",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Aktivieren",
+        "message": "Povolit",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsSubmit": {
-        "message": "Speichern",
+        "message": "Uložit",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Einstellungen gespeichert",
+        "message": "Nastavení uložena",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
