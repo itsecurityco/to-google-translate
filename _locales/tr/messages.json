@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Bir sayfadaki metni seçin ve Google Çeviri'ye gönderin veya telaffuzunu dinleyin.",
+        "message": "Highlight text on a web page and send it to Google Translate or listen the pronunciation",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -17,7 +17,7 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "tr"
+                "example": "es"
             }
         }
     },
@@ -41,7 +41,7 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "tr"
+                "example": "es"
             }
         }
     },
@@ -55,7 +55,7 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "tr"
+                "example": "es"
             }
         }
     },
@@ -68,8 +68,24 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Farklı dillerdeki sayfaları çevirebilmek için kaynak alanını 'auto' seçin.",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages",
         "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Keyboard Shortcuts",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Translate selected text",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS selected text",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Translate page",
+        "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
         "message": "Alan adı",
@@ -82,6 +98,18 @@
     "optionsSelectedDomainChina": {
         "message": "Çin",
         "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Open in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "New Tab",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Metin çevirisi",

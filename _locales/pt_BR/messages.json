@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Selecione texto em uma página e envie para o Google Tradutor ou ouça sua pronúncia.",
+        "message": "Selecione texto em uma página e envie para o Google Tradutor ou ouça sua pronúncia",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Traduzir ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Traduzir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -31,6 +31,34 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
         "message": "Para o Google Tradutor - Pagina de Opções",
         "description": "Title of the options page itself."
@@ -40,8 +68,48 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Defina o campo 'De' como 'auto' para usar quando encontrar vários idiomas.",
+        "message": "Set the From field to 'auto' to use when encountering multiple languages",
         "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Keyboard Shortcuts",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Translate selected text",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS selected text",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Translate page",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Domain",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Global",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Open in",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "New Tab",
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Traduzir texto",
@@ -66,6 +134,22 @@
     "optionsEnableTTS": {
         "message": "Ativar",
         "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Translate Page",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "From",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "To",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Enable",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "Salvar",

@@ -4,11 +4,11 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Markeer tekst op een webpagina en stuur deze naar Google Translate of luister naar de uitspraak.",
+        "message": "Markeer tekst op een webpagina en stuur deze naar Google Translate of luister naar de uitspraak",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Vertalen ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -17,7 +17,7 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "nl"
+                "example": "es"
             }
         }
     },
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "Deze pagina vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Deze pagina vertalen ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -41,12 +41,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "nl"
+                "example": "es"
             }
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "Koppeling vertalen ($PAGE_LANG$\/$USER_LANG$)",
+        "message": "Koppeling vertalen ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -55,12 +55,12 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "nl"
+                "example": "es"
             }
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate - Optiespagina",
+        "message": "Naar Google Translate - Opties pagina",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
@@ -68,7 +68,7 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen.",
+        "message": "Stel het Van-veld in op ‘Auto’ voor gebruik bij beschikbaarheid van meerdere talen",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
