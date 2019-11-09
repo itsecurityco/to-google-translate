@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "To Google Translate",
+        "message": "Al traductor de Google",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Markieren Sie den Text auf einer Webseite und senden Sie ihn an den Google Übersetzer oder hören Sie sich die Aussprache an.",
+        "message": "Seleccione texto en una página web y envíelo al traductor de Google o escuche su pronunciación.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "($PAGE_LANG$\/$USER_LANG$) übersetzen",
+        "message": "Traducir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "($TTS_LANG$) anhören",
+        "message": "Escuchar ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -31,48 +31,104 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "Traducir esta página ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Traducir enlace ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
-        "message": "To Google Translate-Einstellungen",
+        "message": "Al Traductor de Google - Página de opciones",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Einstellungen",
+        "message": "Ajustes",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Von-Feld auf \"auto\" setzen, wenn mehrere Sprachen verwendet werden.",
+        "message": "Configure el campo Origen en 'auto' para usar cuando utilice varios idiomas.",
         "description": "Notice message for language settings"
     },
+    "optionsSelectedDomainCaption": {
+        "message": "Dominio",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Global",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "China",
+        "description": "Preceding label for china domain"
+    },
     "optionsTTCaption": {
-        "message": "Text übersetzen",
+        "message": "Traducir Texto",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "Von",
+        "message": "Origen",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Nach",
+        "message": "Destino",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Aktivieren",
+        "message": "Habilitar",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Sprachausgabe",
+        "message": "Texto a Voz",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Aktivieren",
+        "message": "Habilitar",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
+    "optionsTPCaption": {
+        "message": "Traducir Página",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Origen",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Destino",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Habilitar",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
     "optionsSubmit": {
-        "message": "Speichern",
+        "message": "Guardar",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Einstellungen gespeichert",
+        "message": "Ajustes guardados",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
