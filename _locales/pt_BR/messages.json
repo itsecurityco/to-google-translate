@@ -1,14 +1,14 @@
 {
     "extensionName": {
-        "message": "To Google Translate",
+        "message": "Para o Google Tradutor",
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Zvýrazněte text na webové stránce a nechte si jej přeložit nebo přečíst pomocí Google Překladače.",
+        "message": "Selecione texto em uma página e envie para o Google Tradutor ou ouça sua pronúncia.",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
-        "message": "Přeložit ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Traduzir ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -22,7 +22,7 @@
         }
     },
     "contextMenuTitleTextToSpeech": {
-        "message": "Poslechnout ($TTS_LANG$)",
+        "message": "Ouvir pronúncia ($TTS_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
@@ -31,48 +31,104 @@
             }
         }
     },
+    "contextMenuTitleTranslatePage": {
+        "message": "翻譯此頁面 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "翻譯連結 ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
     "optionsPageTitle": {
-        "message": "To Google Translate - Nastavení",
+        "message": "Para o Google Tradutor - Pagina de Opções",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
-        "message": "Nastavení",
+        "message": "Configurações",
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Nastavte pole 'Z' na \"auto\", pokud se setkáváte s více jazyky.",
+        "message": "Defina o campo 'De' como 'auto' para usar quando encontrar vários idiomas.",
         "description": "Notice message for language settings"
     },
+    "optionsSelectedDomainCaption": {
+        "message": "網域",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "全球",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "中國",
+        "description": "Preceding label for china domain"
+    },
     "optionsTTCaption": {
-        "message": "Přeložit text",
+        "message": "Traduzir texto",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
-        "message": "Z",
+        "message": "De",
         "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
-        "message": "Do",
+        "message": "Para",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Povolit",
+        "message": "Ativar",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Text na řeč",
+        "message": "Texto para fala",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Povolit",
+        "message": "Ativar",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
+    "optionsTPCaption": {
+        "message": "翻譯頁面",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "從",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "至",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "啟用",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
     "optionsSubmit": {
-        "message": "Uložit",
+        "message": "Salvar",
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Nastavení uložena",
+        "message": "Configurações salvas",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
