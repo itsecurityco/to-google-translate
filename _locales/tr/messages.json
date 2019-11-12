@@ -68,23 +68,23 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages",
+        "message": "Birden çok dille karşılaşıyorsanız Kaynak alanını 'auto' seçin",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
-        "message": "Keyboard Shortcuts",
+        "message": "Klavye kısayolları",
         "description": "Notice message for shortcuts"
     },
     "optionsNoteForKeyboardShortcutTranslate": {
-        "message": "Translate selected text",
+        "message": "Seçili metni çevir",
         "description": "Notice message for shortcut translate"
     },
     "optionsNoteForKeyboardShortcutTTS": {
-        "message": "TTS selected text",
+        "message": "Seçili metni seslendir",
         "description": "Notice message for shortcut TTS"
     },
     "optionsNoteForKeyboardShortcutTranslatePage": {
-        "message": "Translate page",
+        "message": "Sayfayı çevir",
         "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
@@ -100,15 +100,15 @@
         "description": "Preceding label for china domain"
     },
     "optionsOpenModeCaption": {
-        "message": "Open in",
+        "message": "Çeviriler nerede açılsın?",
         "description": "Caption open mode"
     },
     "optionsOpenModeModal": {
-        "message": "Modal",
+        "message": "Aynı sekmede",
         "description": "Preceding label for Modal"
     },
     "optionsOpenModeNewTab": {
-        "message": "New Tab",
+        "message": "Yeni sekmede",
         "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
