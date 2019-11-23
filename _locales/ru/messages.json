@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Выделите текст на странице и отправьте его в Google Переводчик или прослушайте произношение",
+        "message": "Переводите тексты и страницы, а также слушайте произношение слов через Google Переводчик",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Перевести эту страницу ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -46,7 +46,7 @@
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
+        "message": "Перевести ссылку ($PAGE_LANG$/$USER_LANG$)",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -68,47 +68,47 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages",
+        "message": "Установите языки текстов на 'auto', чтобы переводить с нескольких языков",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
-        "message": "Keyboard Shortcuts",
+        "message": "Горячие клавиши",
         "description": "Notice message for shortcuts"
     },
     "optionsNoteForKeyboardShortcutTranslate": {
-        "message": "Translate selected text",
+        "message": "Перевести выделенный текст",
         "description": "Notice message for shortcut translate"
     },
     "optionsNoteForKeyboardShortcutTTS": {
-        "message": "TTS selected text",
+        "message": "Прослушать выделенный текст",
         "description": "Notice message for shortcut TTS"
     },
     "optionsNoteForKeyboardShortcutTranslatePage": {
-        "message": "Translate page",
+        "message": "Перевести страницу",
         "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
-        "message": "Domain",
+        "message": "Домен",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "Global",
+        "message": "Глобальный",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "China",
+        "message": "Китай",
         "description": "Preceding label for china domain"
     },
     "optionsOpenModeCaption": {
-        "message": "Open in",
+        "message": "Открывать перевод как",
         "description": "Caption open mode"
     },
     "optionsOpenModeModal": {
-        "message": "Modal",
+        "message": "Всплывающее окно",
         "description": "Preceding label for Modal"
     },
     "optionsOpenModeNewTab": {
-        "message": "New Tab",
+        "message": "Новая вкладка",
         "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
@@ -136,19 +136,19 @@
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "Translate Page",
+        "message": "Перевод страниц",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "From",
+        "message": "Язык текста",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "To",
+        "message": "Язык перевода",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "Enable",
+        "message": "Включить",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
@@ -156,7 +156,7 @@
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Настройки сохранены",
+        "message": "Изменения сохранены",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
