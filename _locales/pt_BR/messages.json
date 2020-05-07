@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Para o Google Tradutor",
+        "message": "extensionName\n\nNome da extensão",
         "description": "Name of the extension"
     },
     "extensionDescription": {
@@ -32,7 +32,7 @@
         }
     },
     "contextMenuTitleTranslatePage": {
-        "message": "Translate this page ($PAGE_LANG$/$USER_LANG$)",
+        "message": "contextMenuTitleTranslatePage\n\nO título contextMenus.\n\nUm valor de amostra para a variável $ page_lang $: en\nUm valor de amostra para a variável $ user_lang $: nl",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -46,7 +46,7 @@
         }
     },
     "contextMenuTitleTranslatePageLink": {
-        "message": "Translate link ($PAGE_LANG$/$USER_LANG$)",
+        "message": "contextMenuTitleTranslatePageLink\n\nO título contextMenus.\n\nUm valor de amostra para a variável $ page_lang $: en\nUm valor de amostra para a variável $ user_lang $: nl",
         "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
@@ -68,47 +68,47 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages",
+        "message": "optionsNoteForEncounteringMultipleLanguage\n\nMensagem de aviso para configurações de idioma",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
-        "message": "Keyboard Shortcuts",
+        "message": "optionsNoteForKeyboardShortcut\n\nMensagem de aviso para atalhos",
         "description": "Notice message for shortcuts"
     },
     "optionsNoteForKeyboardShortcutTranslate": {
-        "message": "Translate selected text",
+        "message": "optionsNoteForKeyboardShortcutTranslate\n\nMensagem de aviso para atalho de tradução",
         "description": "Notice message for shortcut translate"
     },
     "optionsNoteForKeyboardShortcutTTS": {
-        "message": "TTS selected text",
+        "message": "optionsNoteForKeyboardShortcutTTS\n\nMensagem de aviso para o atalho TTS",
         "description": "Notice message for shortcut TTS"
     },
     "optionsNoteForKeyboardShortcutTranslatePage": {
-        "message": "Translate page",
+        "message": "optionsNoteForKeyboardShortcutTranslatePage\n\nMensagem de aviso para a página de tradução de atalhos",
         "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
-        "message": "Domain",
+        "message": "optionsSelectedDomainCaption\n\nDomínio de legenda",
         "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
-        "message": "Global",
+        "message": "optionsSelectedDomainGlobal\n\nRótulo precedente para domínio global",
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "China",
+        "message": "optionsSelectedDomainChina\n\nRótulo precedente para o domínio da china",
         "description": "Preceding label for china domain"
     },
     "optionsOpenModeCaption": {
-        "message": "Open in",
+        "message": "optionsOpenModeCaption\n\nModo de legenda aberta",
         "description": "Caption open mode"
     },
     "optionsOpenModeModal": {
-        "message": "Modal",
+        "message": "optionsOpenModeModal\n\nRótulo precedente para Modal",
         "description": "Preceding label for Modal"
     },
     "optionsOpenModeNewTab": {
-        "message": "New Tab",
+        "message": "optionsOpenModeNewTab\n\nRótulo anterior à Nova Guia",
         "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
@@ -136,19 +136,19 @@
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
-        "message": "Translate Page",
+        "message": "optionsTPCaption\n\nLegenda para tradução de texto",
         "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
-        "message": "From",
+        "message": "optionsTPPageLang\n\nRótulo anterior ao idioma da página",
         "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
-        "message": "To",
+        "message": "optionsTPUserLang\n\nRótulo precedente para o idioma traduzido",
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "Enable",
+        "message": "optionsEnableTP\n\nRótulo para a caixa de seleção para mostrar o item de menu \"Traduzir\"",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
