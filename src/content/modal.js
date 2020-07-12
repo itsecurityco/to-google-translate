@@ -101,6 +101,7 @@ class Modal {
 
     show() {
         this.shadow.querySelector(".modal").style.display = "block";
+        document.body.style.overflow = "hidden";
     }
 
     hide_modal_header() {
@@ -113,5 +114,6 @@ class Modal {
 
     destroy() {
         this.element.remove();
+        document.body.style.overflow = "auto";
     }
 }
