@@ -76,6 +76,7 @@ class Modal {
 
                 this.shadow.querySelector("iframe").src = this.url;
 
+                this.shadow.querySelector(".hide_modal_header").onclick = () => this.hide_modal_header();
                 this.shadow.querySelector(".close").onclick = () => this.destroy();
                 this.shadow.querySelector(".new-tab").onclick = () => this.openNewTab();
                 let modal = this.shadow.querySelector(".modal");
@@ -100,6 +101,10 @@ class Modal {
 
     show() {
         this.shadow.querySelector(".modal").style.display = "block";
+    }
+
+    hide_modal_header() {
+        this.shadow.querySelector(".modal-header").style.display = "none";
     }
 
     hide() {
