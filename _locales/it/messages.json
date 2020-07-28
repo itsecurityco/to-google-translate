@@ -68,7 +68,7 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages",
+        "message": "Impostare il campo Da su 'Auto' da utilizzare quando si incontrano più lingue",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
@@ -148,7 +148,7 @@
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "Enable",
+        "message": "Attiva",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
