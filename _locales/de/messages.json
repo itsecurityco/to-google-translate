@@ -61,11 +61,11 @@
     },
     "optionsPageTitle": {
         "message": "Zu Google Translate - Seitenoptionen",
-        "description": "Titel der Optionsseite selbst."
+        "description": "Titel der Einstellungsseite selbst."
     },
     "optionsTitle": {
         "message": "Einstellungen",
-        "description": "Sichtbarer Titel auf der Optionsseite."
+        "description": "Sichtbarer Titel auf der Einstellungsseite."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Setzen Sie das Von-Feld auf 'auto', um es bei mehreren Sprachen zu verwenden",
