@@ -109,7 +109,7 @@
     },
     "optionsOpenModeNewTab": {
         "message": "Neuer Tab",
-        "description": "Vorangestelltes Label für neuen Tab"
+        "description": "Vorangestellte Beschriftung für neuen Tab"
     },
     "optionsTTCaption": {
         "message": "Text übersetzen",
