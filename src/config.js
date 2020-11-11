@@ -25,7 +25,7 @@ class Config {
             'enableTTS': true,
             'enableTP': true,
             'selectedDomain': 'global',
-            'openMode': 'modal',
+            'openMode': 'newTab',
             'gtDomain': Config.getGoogleTranslatorDomain(),
             'translateURL': `https://${defaultDomain}/?sl=auto&tl=${defaultLanguage}&text=`,
             'ttsURL': `https://${defaultDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en-US&q=`,

@@ -21,16 +21,6 @@
           "src/background/translate.js"
         ]
     },
-    "browser_action": {
-        "default_title": "Google Translate",
-        "default_icon": {
-            "16": "icons/logo-16.png",
-            "32": "icons/logo-32.png",
-            "48": "icons/logo-48.png",
-            "96": "icons/logo-96.png"
-        },
-        "default_popup": "src/popup/popup.html"
-    },
     "content_scripts": [
         {
             "matches": [
