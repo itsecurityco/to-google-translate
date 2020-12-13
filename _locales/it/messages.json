@@ -128,11 +128,11 @@
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Sintesi vocale",
+        "message": "Sintesi Vocale",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Attiva",
+        "message": "Abilita",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
@@ -156,7 +156,7 @@
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Preferenze salvate",
+        "message": "Impostazioni salvate",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
