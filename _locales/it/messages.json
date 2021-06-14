@@ -4,7 +4,7 @@
         "description": "Name of the extension"
     },
     "extensionDescription": {
-        "message": "Evidenzia il testo su una pagina web e inviala a Google Translate o ascoltane la pronuncia",
+        "message": "Evidenzia il testo su una pagina web e invialo a Google Translate o ascolta la pronuncia",
         "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
@@ -60,7 +60,7 @@
         }
     },
     "optionsPageTitle": {
-        "message": "To Google Translate - Opzioni",
+        "message": "To Google Translate - Pagina delle opzioni",
         "description": "Title of the options page itself."
     },
     "optionsTitle": {
@@ -68,11 +68,11 @@
         "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
-        "message": "Set the From field to 'auto' to use when encountering multiple languages",
+        "message": "Imposta il campo Da su 'auto' da usare quando si incontrano lingue multiple",
         "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
-        "message": "Collegamenti rapidi da Tastiera",
+        "message": "Scorciatoie da Tastiera",
         "description": "Notice message for shortcuts"
     },
     "optionsNoteForKeyboardShortcutTranslate": {
@@ -96,7 +96,7 @@
         "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
-        "message": "China",
+        "message": "Cina",
         "description": "Preceding label for china domain"
     },
     "optionsOpenModeCaption": {
@@ -108,11 +108,11 @@
         "description": "Preceding label for Modal"
     },
     "optionsOpenModeNewTab": {
-        "message": "Nuovo Tab",
+        "message": "Nuovo Scheda",
         "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
-        "message": "Traduci il testo",
+        "message": "Traduci Testo",
         "description": "Caption for text translation"
     },
     "optionsPageLang": {
@@ -124,15 +124,15 @@
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
-        "message": "Attiva",
+        "message": "Abilita",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
-        "message": "Sintesi vocale",
+        "message": "Sintesi Vocale",
         "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
-        "message": "Attiva",
+        "message": "Abilita",
         "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
@@ -148,7 +148,7 @@
         "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
-        "message": "Enable",
+        "message": "Abilita",
         "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
@@ -156,7 +156,7 @@
         "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
-        "message": "Preferenze salvate",
+        "message": "Impostazioni salvate",
         "description": "Message to be shown after settings are successfully saved"
     }
 }
