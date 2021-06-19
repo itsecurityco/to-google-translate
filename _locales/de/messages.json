@@ -1,15 +1,15 @@
 {
     "extensionName": {
         "message": "To Google Translate",
-        "description": "Name der Erweiterung"
+        "description": "Name of the extension"
     },
     "extensionDescription": {
         "message": "Markieren Sie den Text auf einer Webseite und senden Sie ihn an den Google Übersetzer oder hören Sie sich die Aussprache an",
-        "description": "Beschreibung der Erweiterung."
+        "description": "Description of the extension."
     },
     "contextMenuTitleTranslate": {
         "message": "($PAGE_LANG$/$USER_LANG$) übersetzen",
-        "description": "Der contextMenus-Titel.",
+        "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
                 "content": "$1",
@@ -17,13 +17,13 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "de"
+                "example": "es"
             }
         }
     },
     "contextMenuTitleTextToSpeech": {
         "message": "($TTS_LANG$) anhören",
-        "description": "Der contextMenus-Titel.",
+        "description": "The contextMenus title.",
         "placeholders": {
             "tts_lang": {
                 "content": "$1",
@@ -33,7 +33,7 @@
     },
     "contextMenuTitleTranslatePage": {
         "message": "Diese Seite übersetzen ($PAGE_LANG$/$USER_LANG$)",
-        "description": "Der contextMenus-Titel.",
+        "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
                 "content": "$1",
@@ -41,13 +41,13 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "de"
+                "example": "es"
             }
         }
     },
     "contextMenuTitleTranslatePageLink": {
         "message": "Link übersetzen ($PAGE_LANG$/$USER_LANG$)",
-        "description": "Der contextMenus-Titel.",
+        "description": "The contextMenus title.",
         "placeholders": {
             "page_lang": {
                 "content": "$1",
@@ -55,108 +55,108 @@
             },
             "user_lang": {
                 "content": "$2",
-                "example": "de"
+                "example": "es"
             }
         }
     },
     "optionsPageTitle": {
         "message": "Zu Google Translate - Seiteneinstellungen",
-        "description": "Titel der Einstellungsseite selbst."
+        "description": "Title of the options page itself."
     },
     "optionsTitle": {
         "message": "Einstellungen",
-        "description": "Sichtbarer Titel auf der Einstellungsseite."
+        "description": "Visible title in the options page."
     },
     "optionsNoteForEncounteringMultipleLanguage": {
         "message": "Setzen Sie das Von-Feld auf 'auto', um es bei mehreren Sprachen zu verwenden",
-        "description": "Hinweistext für Spracheinstellungen"
+        "description": "Notice message for language settings"
     },
     "optionsNoteForKeyboardShortcut": {
         "message": "Tastenkombination",
-        "description": "Hinweismeldung für Tastenkombination"
+        "description": "Notice message for shortcuts"
     },
     "optionsNoteForKeyboardShortcutTranslate": {
         "message": "Ausgewählten Text übersetzen",
-        "description": "Hinweismeldung für Verknüpfung Übersetzen"
+        "description": "Notice message for shortcut translate"
     },
     "optionsNoteForKeyboardShortcutTTS": {
         "message": "TTS ausgewählter Text",
-        "description": "Hinweismeldung für Tastenkombination TTS"
+        "description": "Notice message for shortcut TTS"
     },
     "optionsNoteForKeyboardShortcutTranslatePage": {
         "message": "Seite übersetzen",
-        "description": "Hinweismeldung für Verknüpfung Seite übersetzen"
+        "description": "Notice message for shortcut translate page"
     },
     "optionsSelectedDomainCaption": {
         "message": "Global",
-        "description": "Global Untertitel"
+        "description": "Caption domain"
     },
     "optionsSelectedDomainGlobal": {
         "message": "Global",
-        "description": "Vorangestellte Beschriftung für globale Domäne"
+        "description": "Preceding label for global domain"
     },
     "optionsSelectedDomainChina": {
         "message": "China",
-        "description": "Vorangestellte Beschriftung für globale Domain"
+        "description": "Preceding label for china domain"
     },
     "optionsOpenModeCaption": {
         "message": "Öffnen in",
-        "description": "Untertitel offener Modus"
+        "description": "Caption open mode"
     },
     "optionsOpenModeModal": {
         "message": "Modal",
-        "description": "Vorangestellte Beschriftung für Modal"
+        "description": "Preceding label for Modal"
     },
     "optionsOpenModeNewTab": {
         "message": "Neuer Tab",
-        "description": "Vorangestellte Beschriftung für neuen Tab"
+        "description": "Preceding label for New Tab"
     },
     "optionsTTCaption": {
         "message": "Text übersetzen",
-        "description": "Untertitel für Textübersetzung"
+        "description": "Caption for text translation"
     },
     "optionsPageLang": {
         "message": "Von",
-        "description": "Vorangestellte Beschriftung für die Seitensprache"
+        "description": "Preceding label for the page language"
     },
     "optionsUserLang": {
         "message": "Nach",
-        "description": "Vorangestellte Beschriftung für die zu übersetzende Sprache"
+        "description": "Preceding label for the translated language"
     },
     "optionsEnableTT": {
         "message": "Aktivieren",
-        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des Menüpunkts \"Übersetzen\""
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsTTSCaption": {
         "message": "Sprachausgabe",
-        "description": "Untertitel für Text-to-Speech"
+        "description": "Caption for text to speech"
     },
     "optionsEnableTTS": {
         "message": "Aktivieren",
-        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des \"Hören\"-Menüpunkts"
+        "description": "Label for the checkbox to show \"Listen\" menu item"
     },
     "optionsTPCaption": {
         "message": "Seite übersetzen",
-        "description": "Untertitel für Textübersetzung"
+        "description": "Caption for text translation"
     },
     "optionsTPPageLang": {
         "message": "Von",
-        "description": "Vorangestellte Beschiftung für die Seitensprache"
+        "description": "Preceding label for the page language"
     },
     "optionsTPUserLang": {
         "message": "Nach",
-        "description": "Vorangestellte Beschriftung für die zu übersetzende Sprache"
+        "description": "Preceding label for the translated language"
     },
     "optionsEnableTP": {
         "message": "Aktivieren",
-        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des Menüpunkts \"Übersetzen\""
+        "description": "Label for the checkbox to show \"Translate\" menu item"
     },
     "optionsSubmit": {
         "message": "Speichern",
-        "description": "Beschriftung für die Schaltfläche zum Speichern der Einstellungen"
+        "description": "Label for the button to save settings"
     },
     "optionsMessageSaved": {
         "message": "Einstellungen gespeichert",
-        "description": "Nachricht, die angezeigt wird, nachdem die Einstellungen erfolgreich gespeichert wurden"
+        "description": "Message to be shown after settings are successfully saved"
     }
 }
