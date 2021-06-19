@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Zum Google Übersetzen",
+        "message": "To Google Translate",
         "description": "Name der Erweiterung"
     },
     "extensionDescription": {
@@ -125,7 +125,7 @@
     },
     "optionsEnableTT": {
         "message": "Aktivieren",
-        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des Menüpunkts \"Übersetzen\"
+        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des Menüpunkts \"Übersetzen\""
     },
     "optionsTTSCaption": {
         "message": "Sprachausgabe",
@@ -149,7 +149,7 @@
     },
     "optionsEnableTP": {
         "message": "Aktivieren",
-        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des Menüpunkts \"Übersetzen\"
+        "description": "Beschriftung für das Kontrollkästchen zur Anzeige des Menüpunkts \"Übersetzen\""
     },
     "optionsSubmit": {
         "message": "Speichern",
