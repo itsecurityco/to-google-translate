@@ -39,7 +39,8 @@
 }
 
 .new-tab,
-.close {
+.close,
+.hide_modal_header {
     color: white;
     float: right;
     font-size: 28px;
@@ -50,7 +51,9 @@
 .new-tab:hover,
 .new-tab:focus,
 .close:hover,
-.close:focus {
+.close:focus,
+.hide_modal_header:hover,
+.hide_modal_header:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
