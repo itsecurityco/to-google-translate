@@ -1,0 +1,162 @@
+{
+    "extensionName": {
+        "message": "Al traductor de Google",
+        "description": "Name of the extension"
+    },
+    "extensionDescription": {
+        "message": "Seleccioneu text en una pàgina web i envieu-lo al traductor de Google o escolteu-ne la seva pronunciació",
+        "description": "Description of the extension."
+    },
+    "contextMenuTitleTranslate": {
+        "message": "Tradueix ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "ca"
+            }
+        }
+    },
+    "contextMenuTitleTextToSpeech": {
+        "message": "Escolta ($TTS_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "tts_lang": {
+                "content": "$1",
+                "example": "en"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePage": {
+        "message": "Tradueix aquesta pàgina ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "ca"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Tradueix l'enllaç ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "ca"
+            }
+        }
+    },
+    "optionsPageTitle": {
+        "message": "Al Traductor de Google - Pàgina d'opcions",
+        "description": "Title of the options page itself."
+    },
+    "optionsTitle": {
+        "message": "Configuració",
+        "description": "Visible title in the options page."
+    },
+    "optionsNoteForEncounteringMultipleLanguage": {
+        "message": "Establiu el camp Origen a 'auto' per utilitzar-lo quan trobeu diversos idiomes",
+        "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Dreceres del teclat",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Tradueix el text seleccionat",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "TTS text seleccionat",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Tradueix la pàgina",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Domini",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Global",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "Xina",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Obre en",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modal",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Nova pestanya",
+        "description": "Preceding label for New Tab"
+    },
+    "optionsTTCaption": {
+        "message": "Tradueix el text",
+        "description": "Caption for text translation"
+    },
+    "optionsPageLang": {
+        "message": "Origen",
+        "description": "Preceding label for the page language"
+    },
+    "optionsUserLang": {
+        "message": "Destí",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTT": {
+        "message": "Habilita",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
+    "optionsTTSCaption": {
+        "message": "Text a Veu",
+        "description": "Caption for text to speech"
+    },
+    "optionsEnableTTS": {
+        "message": "Habilita",
+        "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Tradueix la pàgina",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Origen",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Destí",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Habilita",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
+    "optionsSubmit": {
+        "message": "Desa",
+        "description": "Label for the button to save settings"
+    },
+    "optionsMessageSaved": {
+        "message": "S'ha desat la configuració",
+        "description": "Message to be shown after settings are successfully saved"
+    }
+}
