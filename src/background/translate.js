@@ -94,7 +94,7 @@ browser.commands.onCommand.addListener(function (shortcut) {
         let config = Config.config;
 
         if (shortcut === "translate" || shortcut === "tts") {
-            chrome.tabs.executeScript({code: "window.getSelection().toString();"}, function (selection) {
+            chrome.tabs.executeScript({code: "window.getSelection().toString().trim();"}, function (selection) {
                 let selectedText = selection[0] || "";
 
                 if (shortcut === "translate") {
