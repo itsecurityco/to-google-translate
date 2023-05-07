@@ -1,0 +1,162 @@
+{
+    "extensionName": {
+        "message": "To Google Translate",
+        "description": "Name of the extension"
+    },
+    "extensionDescription": {
+        "message": "Označi tekst na web stranici i pošalji ga Google prevoditelju ili poslušaj izgovor",
+        "description": "Description of the extension."
+    },
+    "contextMenuTitleTranslate": {
+        "message": "Prevedi ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTextToSpeech": {
+        "message": "Slušaj ($TTS_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "tts_lang": {
+                "content": "$1",
+                "example": "en"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePage": {
+        "message": "Prevedi ovu stranicu ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "contextMenuTitleTranslatePageLink": {
+        "message": "Prevedi poveznicu ($PAGE_LANG$/$USER_LANG$)",
+        "description": "The contextMenus title.",
+        "placeholders": {
+            "page_lang": {
+                "content": "$1",
+                "example": "en"
+            },
+            "user_lang": {
+                "content": "$2",
+                "example": "es"
+            }
+        }
+    },
+    "optionsPageTitle": {
+        "message": "To Google Translate – Stranica opcija",
+        "description": "Title of the options page itself."
+    },
+    "optionsTitle": {
+        "message": "Postavke",
+        "description": "Visible title in the options page."
+    },
+    "optionsNoteForEncounteringMultipleLanguage": {
+        "message": "Postavi polje „Iz” na „automatski” za prevođenje kada postoje više jezika",
+        "description": "Notice message for language settings"
+    },
+    "optionsNoteForKeyboardShortcut": {
+        "message": "Tipkovni prečaci",
+        "description": "Notice message for shortcuts"
+    },
+    "optionsNoteForKeyboardShortcutTranslate": {
+        "message": "Prevedi odabrani tekst",
+        "description": "Notice message for shortcut translate"
+    },
+    "optionsNoteForKeyboardShortcutTTS": {
+        "message": "Prevedi odabrani tekst u govor",
+        "description": "Notice message for shortcut TTS"
+    },
+    "optionsNoteForKeyboardShortcutTranslatePage": {
+        "message": "Prevedi stranicu",
+        "description": "Notice message for shortcut translate page"
+    },
+    "optionsSelectedDomainCaption": {
+        "message": "Domena",
+        "description": "Caption domain"
+    },
+    "optionsSelectedDomainGlobal": {
+        "message": "Globalno",
+        "description": "Preceding label for global domain"
+    },
+    "optionsSelectedDomainChina": {
+        "message": "Kina",
+        "description": "Preceding label for china domain"
+    },
+    "optionsOpenModeCaption": {
+        "message": "Otvori u",
+        "description": "Caption open mode"
+    },
+    "optionsOpenModeModal": {
+        "message": "Modalu",
+        "description": "Preceding label for Modal"
+    },
+    "optionsOpenModeNewTab": {
+        "message": "Novoj kartici",
+        "description": "Preceding label for New Tab"
+    },
+    "optionsTTCaption": {
+        "message": "Prevedi tekst",
+        "description": "Caption for text translation"
+    },
+    "optionsPageLang": {
+        "message": "Iz",
+        "description": "Preceding label for the page language"
+    },
+    "optionsUserLang": {
+        "message": "Na",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTT": {
+        "message": "Aktiviraj",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
+    "optionsTTSCaption": {
+        "message": "Tekst u govor",
+        "description": "Caption for text to speech"
+    },
+    "optionsEnableTTS": {
+        "message": "Aktiviraj",
+        "description": "Label for the checkbox to show \"Listen\" menu item"
+    },
+    "optionsTPCaption": {
+        "message": "Prevedi stranicu",
+        "description": "Caption for text translation"
+    },
+    "optionsTPPageLang": {
+        "message": "Iz",
+        "description": "Preceding label for the page language"
+    },
+    "optionsTPUserLang": {
+        "message": "Na",
+        "description": "Preceding label for the translated language"
+    },
+    "optionsEnableTP": {
+        "message": "Aktiviraj",
+        "description": "Label for the checkbox to show \"Translate\" menu item"
+    },
+    "optionsSubmit": {
+        "message": "Spremi",
+        "description": "Label for the button to save settings"
+    },
+    "optionsMessageSaved": {
+        "message": "Postavke su spremljene",
+        "description": "Message to be shown after settings are successfully saved"
+    }
+}
