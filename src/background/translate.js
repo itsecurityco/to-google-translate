@@ -61,6 +61,21 @@ new Config(true, items => {
                 title: chrome.i18n.getMessage('contextMenuTitleTranslate', [pageLang, userLang]),
                 contexts: ['selection']
             });
+            chrome.contextMenus.create({
+                id: 'wiktionary',
+                title: 'Wiktionary lookup',
+                contexts: ['selection']
+            });
+            chrome.contextMenus.create({
+                id: 'glosbe',
+                title: 'Glosbe',
+                contexts: ['selection']
+            });
+            chrome.contextMenus.create({
+                id: 'reverso',
+                title: 'Reverso Context',
+                contexts: ['selection']
+            });
         }
         // create Listen context menu
         if (enableTTS) {
@@ -114,8 +129,25 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     let selectedText = info.selectionText;
     let config = Config.config;
+    let langFrom = Config.supportedLanguages.text.find(x => x.code === Config.config.pageLang).language;
+    let langTo = Config.supportedLanguages.text.find(x => x.code === Config.config.userLang).language;
 
     switch (info.menuItemId) {
+        case 'reverso':
+            browser.tabs.create({
+                url: `https://context.reverso.net/translation/${langFrom.toLowerCase()}-${langTo.toLowerCase()}/${selectedText.toLowerCase()}`,
+            }).then(null, () => alert("failed to make a new tab"));
+            break;
+        case 'glosbe':
+            browser.tabs.create({
+                url: `https://glosbe.com/${Config.config.pageLang}/${Config.config.userLang}/${selectedText.toLowerCase()}`,
+            }).then(null, () => alert("failed to make a new tab"));
+            break;
+        case 'wiktionary':
+            browser.tabs.create({
+                url: "https://en.wiktionary.org/wiki/" + selectedText.toLowerCase() + `#${langFrom}`,
+            }).then(null, () => alert("failed to make a new tab"));
+            break;
         case 'translate':
             openTranslate(config.translateURL + encodeURIComponent(selectedText), tab);
             break;
