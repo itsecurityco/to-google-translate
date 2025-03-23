@@ -20,7 +20,7 @@ You can test the extension in Firefox with *web-ext*. *web-ext* can be installed
 sudo npm install --global web-ext
 ```
 Download the code from Github
-```sh
+``sh
 git clone https://github.com/itseco/to-google-translate.git
 cd to-google-translate
 make prepare
